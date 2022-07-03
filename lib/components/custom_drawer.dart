@@ -163,7 +163,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             children: <Widget>[
               ListTile(
                 title: const Text(
-                  'Sign Out',
+                  'Logout',
                   style: TextStyle(
                     fontFamily: fontName,
                     fontWeight: FontWeight.w600,
