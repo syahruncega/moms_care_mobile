@@ -126,6 +126,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       child: Text(
                         'Kevin',
                         style: TextStyle(
+                          fontFamily: fontName,
                           fontWeight: FontWeight.w600,
                           color: grey,
                           fontSize: 18,
@@ -245,6 +246,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   Text(
                     listData.labelName,
                     style: TextStyle(
+                      fontFamily: fontName,
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
                       color: widget.screenIndex == listData.index
