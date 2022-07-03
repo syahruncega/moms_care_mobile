@@ -4,7 +4,7 @@ import '../consts/colors.dart';
 
 Widget appBar() {
   return Material(
-    elevation: 5,
+    elevation: 2,
     child: SizedBox(
       height: AppBar().preferredSize.height,
       child: Row(
