@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:moms_care_mobile/components/dashboard/anggota_keluarga_Item.dart';
-import 'package:moms_care_mobile/components/dashboard/kepala_keluarga_card.dart';
 import 'package:moms_care_mobile/consts/fonts.dart';
 import '../../components/custom_appBar.dart';
 import '../../components/dashboard/card_dashboard.dart';
@@ -36,9 +34,7 @@ class DashboardScreen extends StatelessWidget {
                 ),
               ],
             ),
-            // const KeluargaDashboard(),
-            // const MealsListView(),
-            const KepalaKeluargaCard(),
+            const KeluargaDashboard(),
           ],
         ),
       ),
