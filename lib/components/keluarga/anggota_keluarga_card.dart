@@ -6,14 +6,14 @@ import 'package:dotted_border/dotted_border.dart';
 import '../../consts/colors.dart';
 import '../../consts/hex_color.dart';
 
-class MealsListView extends StatefulWidget {
-  const MealsListView({Key? key}) : super(key: key);
+class AnggotaKeluarga extends StatefulWidget {
+  const AnggotaKeluarga({Key? key}) : super(key: key);
 
   @override
-  _MealsListViewState createState() => _MealsListViewState();
+  _AnggotaKeluargaState createState() => _AnggotaKeluargaState();
 }
 
-class _MealsListViewState extends State<MealsListView>
+class _AnggotaKeluargaState extends State<AnggotaKeluarga>
     with TickerProviderStateMixin {
   AnimationController? animationController;
   List<MealsListData> mealsListData = MealsListData.tabIconsList;

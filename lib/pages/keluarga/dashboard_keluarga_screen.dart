@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:moms_care_mobile/components/dashboard/anggota_keluarga_Item.dart';
-import 'package:moms_care_mobile/components/dashboard/istri_card.dart';
-import 'package:moms_care_mobile/components/dashboard/kepala_keluarga_card.dart';
+import 'package:moms_care_mobile/components/keluarga/anggota_keluarga_card.dart';
 import 'package:moms_care_mobile/consts/fonts.dart';
 import '../../components/custom_appBar.dart';
 import '../../components/dashboard/card_dashboard.dart';
-import '../../components/dashboard/keluarga.dart';
+import '../../components/keluarga/istri_card.dart';
+import '../../components/keluarga/keluarga_dashboard.dart';
+import '../../components/keluarga/kepala_keluarga_card.dart';
 import '../../consts/colors.dart';
 
-class DashboardScreen extends StatelessWidget {
-  const DashboardScreen({Key? key}) : super(key: key);
+class DashboardKeluargaScreen extends StatelessWidget {
+  const DashboardKeluargaScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,8 +38,8 @@ class DashboardScreen extends StatelessWidget {
               ],
             ),
             // const KeluargaDashboard(),
-            // const MealsListView(),
-            const KepalaKeluargaCard(),
+            // const AnggotaKeluarga(),
+            // const KepalaKeluargaCard(),
             const IstriCard(),
           ],
         ),

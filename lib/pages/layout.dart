@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moms_care_mobile/pages/dashboard/dashboard_screen.dart';
+import 'package:moms_care_mobile/pages/keluarga/dashboard_keluarga_screen.dart';
 
 import '../components/custom_appBar.dart';
 import '../components/custom_drawer.dart';
@@ -20,7 +20,7 @@ class _LayoutState extends State<Layout> {
   @override
   void initState() {
     drawerIndex = DrawerIndex.dashboard;
-    screenView = const DashboardScreen(); //const Dashboard();
+    screenView = const DashboardKeluargaScreen(); //const Dashboard();
     super.initState();
   }
 
@@ -54,7 +54,7 @@ class _LayoutState extends State<Layout> {
       switch (drawerIndex) {
         case DrawerIndex.dashboard:
           setState(() {
-            screenView = const DashboardScreen(); //const Dashboard();
+            screenView = const DashboardKeluargaScreen(); //const Dashboard();
           });
           break;
         case DrawerIndex.anggotaKeluarga:
