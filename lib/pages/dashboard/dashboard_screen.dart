@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:moms_care_mobile/components/dashboard/anggota_keluarga_Item.dart';
+import 'package:moms_care_mobile/components/dashboard/istri_card.dart';
 import 'package:moms_care_mobile/components/dashboard/kepala_keluarga_card.dart';
 import 'package:moms_care_mobile/consts/fonts.dart';
 import '../../components/custom_appBar.dart';
@@ -14,7 +15,7 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: white,
+      backgroundColor: backgroundScaffold,
       body: Padding(
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
         child: Column(
@@ -39,6 +40,7 @@ class DashboardScreen extends StatelessWidget {
             // const KeluargaDashboard(),
             // const MealsListView(),
             const KepalaKeluargaCard(),
+            const IstriCard(),
           ],
         ),
       ),

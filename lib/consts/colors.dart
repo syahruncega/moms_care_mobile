@@ -25,6 +25,7 @@ const Color cardTextRed = Color(0xFF842029);
 const Color cardDarkRed = Color(0xFFDC3545);
 
 const Color white = Color(0xFFFFFFFF);
+const Color backgroundScaffold = Color(0xFFF4F7F6);
 const Color nearlyWhite = Color(0xFFFEFEFE);
 const Color nearlyBlack = Color(0xFF213333);
 const Color notWhite = Color(0xFFEDF0F2);

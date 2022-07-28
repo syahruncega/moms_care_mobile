@@ -37,7 +37,7 @@ Widget appBar() {
             child: Container(
               width: AppBar().preferredSize.height - 8,
               height: AppBar().preferredSize.height - 8,
-              color: Colors.white,
+              // color: Colors.white,
               child: Material(
                 color: Colors.transparent,
                 child: InkWell(

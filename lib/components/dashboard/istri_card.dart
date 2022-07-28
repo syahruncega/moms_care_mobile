@@ -6,15 +6,14 @@ import 'dart:math' as math;
 import '../../consts/colors.dart';
 import '../../consts/hex_color.dart';
 
-class KepalaKeluargaCard extends StatefulWidget {
-  const KepalaKeluargaCard({Key? key}) : super(key: key);
+class IstriCard extends StatefulWidget {
+  const IstriCard({Key? key}) : super(key: key);
 
   @override
-  State<KepalaKeluargaCard> createState() => _KepalaKeluargaCardState();
+  State<IstriCard> createState() => _IstriCardState();
 }
 
-class _KepalaKeluargaCardState extends State<KepalaKeluargaCard>
-    with TickerProviderStateMixin {
+class _IstriCardState extends State<IstriCard> with TickerProviderStateMixin {
   AnimationController? animationController;
 
   @override
@@ -93,7 +92,7 @@ class _KepalaKeluargaCardState extends State<KepalaKeluargaCard>
                                           padding: const EdgeInsets.only(
                                               left: 4, bottom: 2),
                                           child: Text(
-                                            'Kepala Keluarga',
+                                            'Istri',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
                                               fontFamily: fontWorkSans,
@@ -121,7 +120,7 @@ class _KepalaKeluargaCardState extends State<KepalaKeluargaCard>
                                                 left: 4,
                                               ),
                                               child: Text(
-                                                'Kevin',
+                                                'Ria',
                                                 // '${(1127 * animation.value).toInt()}',
                                                 textAlign: TextAlign.center,
                                                 style: TextStyle(
@@ -139,21 +138,21 @@ class _KepalaKeluargaCardState extends State<KepalaKeluargaCard>
                                               width: 18,
                                               height: 18,
                                               child: SvgPicture.asset(
-                                                  "assets/icons/check-mark.svg"),
+                                                  "assets/icons/info.svg"),
                                             ),
                                             Padding(
                                               padding: const EdgeInsets.only(
                                                 left: 4,
                                               ),
                                               child: Text(
-                                                'Tervalidasi',
+                                                'Belum Divalidasi',
                                                 // '${(1127 * animation.value).toInt()}',
                                                 textAlign: TextAlign.center,
                                                 style: TextStyle(
                                                     fontFamily: fontNunito,
                                                     fontWeight: FontWeight.w600,
                                                     fontSize: 12,
-                                                    color: Colors.green
+                                                    color: Colors.amber
                                                         .withOpacity(0.8)),
                                               ),
                                             ),
@@ -218,8 +217,7 @@ class _KepalaKeluargaCardState extends State<KepalaKeluargaCard>
                                               padding: EdgeInsets.only(
                                                   left: 4, bottom: 3),
                                               child: Text(
-                                                'Laki - laki',
-                                                // '${(102 * animation.value).toInt()}',
+                                                'Perempuan',
                                                 textAlign: TextAlign.center,
                                                 style: TextStyle(
                                                   fontFamily: fontWorkSans,
@@ -244,7 +242,7 @@ class _KepalaKeluargaCardState extends State<KepalaKeluargaCard>
                         padding: const EdgeInsets.only(right: 16),
                         child: Center(
                           child: SvgPicture.asset(
-                            'assets/images/father.svg',
+                            'assets/images/mother.svg',
                             width: 100,
                             height: 100,
                           ),
