@@ -18,16 +18,17 @@ class LoginScreen extends StatelessWidget {
           children: <Widget>[
             Center(
               child: Padding(
-                padding: const EdgeInsets.only(top: 55, bottom: 10),
+                padding: EdgeInsets.only(
+                    top: size.height * 0.06, bottom: size.height * 0.02),
                 child: SizedBox(
                   height: size.height * 0.25,
                   child:
-                      SvgPicture.asset("assets/images/password_Isometric.svg"),
+                      SvgPicture.asset("assets/images/password_isometric.svg"),
                 ),
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(left: 45, right: 45, bottom: 35),
+              margin: const EdgeInsets.only(left: 18, right: 18, bottom: 35),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: const BorderRadius.only(
@@ -82,7 +83,7 @@ class LoginScreen extends StatelessWidget {
                           color: Colors.grey.withOpacity(0.1),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(7.0),
                           child: TabBar(
                             unselectedLabelColor: Colors.black,
                             onTap: (index) {
@@ -93,7 +94,7 @@ class LoginScreen extends StatelessWidget {
                                 children: <Widget>[
                                   SvgPicture.asset(
                                     "assets/icons/family.svg",
-                                    height: 25,
+                                    height: 20,
                                     color: tabIndex == 0
                                         ? Colors.white
                                         : Colors.black,
@@ -102,7 +103,8 @@ class LoginScreen extends StatelessWidget {
                                     padding: EdgeInsets.only(left: 4),
                                     child: Text(
                                       'Keluarga',
-                                      style: TextStyle(fontFamily: fontNunito),
+                                      style: TextStyle(
+                                          fontFamily: fontNunito, fontSize: 12),
                                     ),
                                   ),
                                 ],
@@ -111,7 +113,7 @@ class LoginScreen extends StatelessWidget {
                                 children: <Widget>[
                                   SvgPicture.asset(
                                     "assets/icons/nurse.svg",
-                                    height: 25,
+                                    height: 19,
                                     color: tabIndex == 1
                                         ? Colors.white
                                         : Colors.black,
@@ -120,7 +122,8 @@ class LoginScreen extends StatelessWidget {
                                     padding: EdgeInsets.only(left: 4),
                                     child: Text(
                                       'Bidan',
-                                      style: TextStyle(fontFamily: fontNunito),
+                                      style: TextStyle(
+                                          fontFamily: fontNunito, fontSize: 12),
                                     ),
                                   ),
                                 ],
@@ -129,7 +132,7 @@ class LoginScreen extends StatelessWidget {
                                 children: <Widget>[
                                   SvgPicture.asset(
                                     "assets/icons/people_group.svg",
-                                    height: 25,
+                                    height: 17,
                                     color: tabIndex == 1
                                         ? Colors.white
                                         : Colors.black,
@@ -138,7 +141,8 @@ class LoginScreen extends StatelessWidget {
                                     padding: EdgeInsets.only(left: 4),
                                     child: Text(
                                       'Penyuluh',
-                                      style: TextStyle(fontFamily: fontNunito),
+                                      style: TextStyle(
+                                          fontFamily: fontNunito, fontSize: 12),
                                     ),
                                   ),
                                 ],

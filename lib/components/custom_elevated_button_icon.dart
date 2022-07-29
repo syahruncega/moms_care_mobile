@@ -29,9 +29,9 @@ class CustomElevatedButtonIcon extends StatelessWidget {
         elevation: 8,
         padding: const EdgeInsets.only(
           left: 10,
-          top: 15,
-          bottom: 15,
-          right: 20,
+          top: 8,
+          bottom: 8,
+          right: 10,
         ),
       ),
       icon: isLoading
