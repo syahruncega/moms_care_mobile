@@ -5,8 +5,27 @@ import 'package:moms_care_mobile/consts/fonts.dart';
 import '../../consts/colors.dart';
 import '../../consts/hex_color.dart';
 
-class AnakCard extends StatelessWidget {
-  const AnakCard({Key? key}) : super(key: key);
+class AnggotaKeluargaCard extends StatelessWidget {
+  final String title;
+  final String nama;
+  final bool isValidated;
+  final String jenisKelamin;
+  final String tglLahir;
+  final String umur;
+  final String alamat;
+  final int anggotaId; // suami (1), Istri (2), Anak (3)
+
+  const AnggotaKeluargaCard(
+      {required this.title,
+      required this.nama,
+      required this.isValidated,
+      required this.jenisKelamin,
+      required this.tglLahir,
+      required this.umur,
+      required this.alamat,
+      required this.anggotaId,
+      Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +78,7 @@ class AnakCard extends StatelessWidget {
                                       padding: const EdgeInsets.only(
                                           left: 4, bottom: 2),
                                       child: Text(
-                                        'Anak',
+                                        title,
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                           fontFamily: fontWorkSans,
@@ -82,14 +101,14 @@ class AnakCard extends StatelessWidget {
                                           child: SvgPicture.asset(
                                               "assets/icons/user.svg"),
                                         ),
-                                        const Padding(
-                                          padding: EdgeInsets.only(
+                                        Padding(
+                                          padding: const EdgeInsets.only(
                                             left: 4,
                                           ),
                                           child: Text(
-                                            'Mayapada',
+                                            nama,
                                             textAlign: TextAlign.center,
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               fontFamily: fontWorkSans,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 16,
@@ -103,15 +122,20 @@ class AnakCard extends StatelessWidget {
                                         SizedBox(
                                           width: 18,
                                           height: 18,
-                                          child: SvgPicture.asset(
-                                              "assets/icons/info.svg"),
+                                          child: isValidated
+                                              ? SvgPicture.asset(
+                                                  "assets/icons/check-mark.svg")
+                                              : SvgPicture.asset(
+                                                  "assets/icons/info.svg"),
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.only(
                                             left: 4,
                                           ),
                                           child: Text(
-                                            'Belum Divalidasi',
+                                            isValidated
+                                                ? "Tervalidasi"
+                                                : "Belum Divalidasi",
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
                                                 fontFamily: fontNunito,
@@ -175,13 +199,13 @@ class AnakCard extends StatelessWidget {
                                           child: SvgPicture.asset(
                                               "assets/icons/gender.svg"),
                                         ),
-                                        const Padding(
-                                          padding: EdgeInsets.only(
+                                        Padding(
+                                          padding: const EdgeInsets.only(
                                               left: 4, bottom: 3),
                                           child: Text(
-                                            'Perempuan',
+                                            jenisKelamin,
                                             textAlign: TextAlign.center,
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               fontFamily: fontWorkSans,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 16,
@@ -203,11 +227,23 @@ class AnakCard extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(right: 16),
                     child: Center(
-                      child: SvgPicture.asset(
-                        'assets/images/children.svg',
-                        width: 90,
-                        height: 90,
-                      ),
+                      child: (anggotaId == 1)
+                          ? SvgPicture.asset(
+                              'assets/images/father.svg',
+                              width: 90,
+                              height: 90,
+                            )
+                          : (anggotaId == 2)
+                              ? SvgPicture.asset(
+                                  'assets/images/mother.svg',
+                                  width: 90,
+                                  height: 90,
+                                )
+                              : SvgPicture.asset(
+                                  'assets/images/children.svg',
+                                  width: 90,
+                                  height: 90,
+                                ),
                     ),
                   )
                 ],
@@ -275,7 +311,7 @@ class AnakCard extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(top: 6),
                           child: Text(
-                            '23 Agustus 1998',
+                            tglLahir,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontFamily: fontWorkSans,
@@ -338,7 +374,7 @@ class AnakCard extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
                               child: Text(
-                                '23 Tahun, 11 Bulan',
+                                umur,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: fontWorkSans,
@@ -402,7 +438,7 @@ class AnakCard extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
                               child: Text(
-                                'Palu',
+                                alamat,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: fontWorkSans,

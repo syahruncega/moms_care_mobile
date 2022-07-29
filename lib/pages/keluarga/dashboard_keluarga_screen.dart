@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:moms_care_mobile/components/keluarga/anak_card.dart';
+import 'package:moms_care_mobile/components/keluarga/anggota_keluarga_card.dart';
 import 'package:moms_care_mobile/consts/fonts.dart';
 import '../../components/custom_appBar.dart';
 import '../../components/dashboard/card_dashboard.dart';
-import '../../components/keluarga/istri_card.dart';
 import '../../components/keluarga/keluarga_dashboard.dart';
-import '../../components/keluarga/kepala_keluarga_card.dart';
 import '../../consts/colors.dart';
 
 class DashboardKeluargaScreen extends StatelessWidget {
@@ -38,9 +36,7 @@ class DashboardKeluargaScreen extends StatelessWidget {
               ],
             ),
             // const KeluargaDashboard(),
-            // const KepalaKeluargaCard(),
-            // const IstriCard(),
-            // const AnakCard(),
+            // const AnggotaKeluargaCard(),
           ],
         ),
       ),
