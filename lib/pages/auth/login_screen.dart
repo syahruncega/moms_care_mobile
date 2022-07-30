@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lottie/lottie.dart';
 import 'package:moms_care_mobile/components/custom_elevated_button_icon.dart';
 import 'package:moms_care_mobile/components/custom_text_field.dart';
 import 'package:moms_care_mobile/consts/fonts.dart';
@@ -22,8 +23,7 @@ class LoginScreen extends StatelessWidget {
                     top: size.height * 0.06, bottom: size.height * 0.02),
                 child: SizedBox(
                   height: size.height * 0.25,
-                  child:
-                      SvgPicture.asset("assets/images/password_isometric.svg"),
+                  child: LottieBuilder.asset("assets/anim/login.json"),
                 ),
               ),
             ),
@@ -159,7 +159,7 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(
                       height: size.height * 0.03,
                     ),
-                    FilledTextField(
+                    CustomTextField(
                       title: "Nomor Hp/NIK",
                       hintText: "081322......",
                       keyboardType: TextInputType.phone,
@@ -171,7 +171,7 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(
                       height: size.height * 0.03,
                     ),
-                    FilledTextField(
+                    CustomTextField(
                       title: "Kata Sandi",
                       hintText: "Kata Sandi",
                       suffixIcon: IconButton(

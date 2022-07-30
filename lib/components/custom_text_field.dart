@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:moms_care_mobile/consts/colors.dart';
 import 'package:moms_care_mobile/consts/fonts.dart';
 
-class FilledTextField extends StatelessWidget {
+class CustomTextField extends StatelessWidget {
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final String? hintText;
@@ -24,7 +25,8 @@ class FilledTextField extends StatelessWidget {
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
   final String? initialValue;
-  const FilledTextField({
+  final bool isRequired;
+  const CustomTextField({
     this.prefixIcon,
     this.suffixIcon,
     this.hintText,
@@ -46,6 +48,7 @@ class FilledTextField extends StatelessWidget {
     this.onChanged,
     this.initialValue,
     this.maxLength,
+    this.isRequired = false,
     Key? key,
   }) : super(key: key);
 
@@ -56,12 +59,25 @@ class FilledTextField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if (title != null)
-          Text(
-            title!,
-            style: const TextStyle(
-              fontFamily: fontNunito,
-              fontWeight: FontWeight.w700,
-            ),
+          Row(
+            children: [
+              Text(
+                title!,
+                style: const TextStyle(
+                  fontFamily: fontNunito,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              if (isRequired)
+                const Text(
+                  "*",
+                  style: TextStyle(
+                    fontFamily: fontNunito,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.red,
+                  ),
+                ),
+            ],
           ),
         if (title != null) SizedBox(height: size.height * 0.01),
         TextFormField(

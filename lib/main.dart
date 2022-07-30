@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:moms_care_mobile/pages/auth/login_screen.dart';
+import 'package:moms_care_mobile/pages/keluarga/registrasi_keluarga.dart';
 import 'package:moms_care_mobile/pages/layout.dart';
 
 void main() async {
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: 1 == 1 ? const LoginScreen() : const Layout(),
+      home: 1 == 1 ? const RegistrasiKeluarga() : const Layout(),
     );
   }
 }
