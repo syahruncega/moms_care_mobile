@@ -35,8 +35,10 @@ class DashboardKeluargaScreen extends StatelessWidget {
                 ),
               ],
             ),
-            // const KeluargaDashboard(),
-            // const AnggotaKeluargaCard(),
+            const SizedBox(
+              height: 10,
+            ),
+            const KeluargaDashboard(),
           ],
         ),
       ),

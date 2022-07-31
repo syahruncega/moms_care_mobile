@@ -29,8 +29,9 @@ class AnggotaKeluargaCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.only(left: 24, right: 24, top: 16, bottom: 18),
+      padding: const EdgeInsets.only(left: 17, right: 17, top: 16, bottom: 18),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
@@ -75,14 +76,13 @@ class AnggotaKeluargaCard extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 4, bottom: 2),
+                                      padding: const EdgeInsets.only(bottom: 2),
                                       child: Text(
                                         title,
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                          fontFamily: fontWorkSans,
-                                          fontWeight: FontWeight.w500,
+                                          fontFamily: fontNunito,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 16,
                                           letterSpacing: -0.1,
                                           color: grey.withOpacity(0.5),
@@ -97,7 +97,7 @@ class AnggotaKeluargaCard extends StatelessWidget {
                                       children: <Widget>[
                                         SizedBox(
                                           width: 18,
-                                          height: 18,
+                                          height: 24,
                                           child: SvgPicture.asset(
                                               "assets/icons/user.svg"),
                                         ),
@@ -105,44 +105,19 @@ class AnggotaKeluargaCard extends StatelessWidget {
                                           padding: const EdgeInsets.only(
                                             left: 4,
                                           ),
-                                          child: Text(
-                                            nama,
-                                            textAlign: TextAlign.center,
-                                            style: const TextStyle(
-                                              fontFamily: fontWorkSans,
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 16,
-                                              color: textDarker,
-                                            ),
-                                          ),
-                                        ),
-                                        const SizedBox(
-                                          width: 20,
-                                        ),
-                                        SizedBox(
-                                          width: 18,
-                                          height: 18,
-                                          child: isValidated
-                                              ? SvgPicture.asset(
-                                                  "assets/icons/check-mark.svg")
-                                              : SvgPicture.asset(
-                                                  "assets/icons/info.svg"),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                            left: 4,
-                                          ),
-                                          child: Text(
-                                            isValidated
-                                                ? "Tervalidasi"
-                                                : "Belum Divalidasi",
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
+                                          child: SizedBox(
+                                            width: size.width * 0.3,
+                                            child: Text(
+                                              nama,
+                                              textAlign: TextAlign.start,
+                                              style: const TextStyle(
                                                 fontFamily: fontNunito,
                                                 fontWeight: FontWeight.w600,
-                                                fontSize: 12,
-                                                color: Colors.amber
-                                                    .withOpacity(0.8)),
+                                                fontSize: 15,
+                                                color: textDarker,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -150,6 +125,40 @@ class AnggotaKeluargaCard extends StatelessWidget {
                                   ],
                                 ),
                               )
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 10),
+                                child: SizedBox(
+                                  width: 18,
+                                  height: 18,
+                                  child: isValidated
+                                      ? SvgPicture.asset(
+                                          "assets/icons/check-mark.svg")
+                                      : SvgPicture.asset(
+                                          "assets/icons/info.svg"),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 4,
+                                ),
+                                child: Text(
+                                  isValidated
+                                      ? "Tervalidasi"
+                                      : "Belum Divalidasi",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontFamily: fontNunito,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 12,
+                                      color: isValidated
+                                          ? Colors.green
+                                          : Colors.amber.withOpacity(0.8)),
+                                ),
+                              ),
                             ],
                           ),
                           const SizedBox(
@@ -179,8 +188,8 @@ class AnggotaKeluargaCard extends StatelessWidget {
                                         'Jenis Kelamin',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                          fontFamily: fontWorkSans,
-                                          fontWeight: FontWeight.w500,
+                                          fontFamily: fontNunito,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 16,
                                           letterSpacing: -0.1,
                                           color: grey.withOpacity(0.5),
@@ -206,7 +215,7 @@ class AnggotaKeluargaCard extends StatelessWidget {
                                             jenisKelamin,
                                             textAlign: TextAlign.center,
                                             style: const TextStyle(
-                                              fontFamily: fontWorkSans,
+                                              fontFamily: fontNunito,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 16,
                                               color: textDarker,
@@ -274,8 +283,8 @@ class AnggotaKeluargaCard extends StatelessWidget {
                           'Tanggal Lahir',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontFamily: fontWorkSans,
-                            fontWeight: FontWeight.w500,
+                            fontFamily: fontNunito,
+                            fontWeight: FontWeight.w600,
                             fontSize: 16,
                             letterSpacing: -0.2,
                             color: textDarker,
@@ -314,7 +323,7 @@ class AnggotaKeluargaCard extends StatelessWidget {
                             tglLahir,
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: fontWorkSans,
+                              fontFamily: fontNunito,
                               fontWeight: FontWeight.w600,
                               fontSize: 12,
                               color: grey.withOpacity(0.5),
@@ -331,7 +340,7 @@ class AnggotaKeluargaCard extends StatelessWidget {
                       children: <Widget>[
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             const Text(
                               'Umur',

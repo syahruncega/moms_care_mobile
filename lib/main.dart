@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: 1 == 1 ? const RegistrasiKeluarga() : const Layout(),
+      home: 1 == 2 ? const RegistrasiKeluarga() : const Layout(),
     );
   }
 }
