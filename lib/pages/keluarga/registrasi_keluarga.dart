@@ -115,7 +115,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 12),
                               child: SvgPicture.asset(
-                                "assets/icons/password.svg",
+                                "assets/icons/number-input.svg",
                                 height: 20,
                               ),
                             ),
@@ -131,7 +131,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 12),
                               child: SvgPicture.asset(
-                                "assets/icons/user.svg",
+                                "assets/icons/text-input.svg",
                                 height: 20,
                               ),
                             ),
@@ -147,7 +147,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 12),
                               child: SvgPicture.asset(
-                                "assets/icons/user.svg",
+                                "assets/icons/text-input.svg",
                                 height: 20,
                               ),
                             ),
@@ -189,7 +189,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 12),
                                     child: SvgPicture.asset(
-                                      "assets/icons/user.svg",
+                                      "assets/icons/number-input.svg",
                                       height: 20,
                                     ),
                                   ),
@@ -284,7 +284,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 12),
                                 child: SvgPicture.asset(
-                                  "assets/icons/user.svg",
+                                  "assets/icons/text-input.svg",
                                   height: 20,
                                 ),
                               ),
@@ -300,7 +300,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 12),
                                 child: SvgPicture.asset(
-                                  "assets/icons/user.svg",
+                                  "assets/icons/number-input.svg",
                                   height: 20,
                                 ),
                               ),
@@ -364,7 +364,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 12),
                                 child: SvgPicture.asset(
-                                  "assets/icons/user.svg",
+                                  "assets/icons/address-input.svg",
                                   height: 20,
                                 ),
                               ),
@@ -380,7 +380,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 12),
                                 child: SvgPicture.asset(
-                                  "assets/icons/user.svg",
+                                  "assets/icons/date-input.svg",
                                   height: 20,
                                 ),
                               ),
@@ -451,7 +451,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 12),
                                 child: SvgPicture.asset(
-                                  "assets/icons/user.svg",
+                                  "assets/icons/date-input.svg",
                                   height: 20,
                                 ),
                               ),
@@ -520,7 +520,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 12),
                                 child: SvgPicture.asset(
-                                  "assets/icons/user.svg",
+                                  "assets/icons/number-input.svg",
                                   height: 20,
                                 ),
                               ),
@@ -536,7 +536,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 12),
                                 child: SvgPicture.asset(
-                                  "assets/icons/user.svg",
+                                  "assets/icons/number-input.svg",
                                   height: 20,
                                 ),
                               ),
@@ -552,7 +552,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 12),
                                 child: SvgPicture.asset(
-                                  "assets/icons/user.svg",
+                                  "assets/icons/text-input.svg",
                                   height: 20,
                                 ),
                               ),
@@ -568,7 +568,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 12),
                                 child: SvgPicture.asset(
-                                  "assets/icons/user.svg",
+                                  "assets/icons/text-input.svg",
                                   height: 20,
                                 ),
                               ),
@@ -628,7 +628,7 @@ class RegistrasiKeluarga extends StatelessWidget {
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 12),
                                         child: SvgPicture.asset(
-                                          "assets/icons/user.svg",
+                                          "assets/icons/address-input.svg",
                                           height: 20,
                                         ),
                                       ),
