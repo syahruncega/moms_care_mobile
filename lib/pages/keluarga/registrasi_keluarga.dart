@@ -13,6 +13,7 @@ import '../../components/custom_text_field.dart';
 import '../../consts/colors.dart';
 import '../../consts/fonts.dart';
 
+//! will change to stateless when statemanagement lib implemented
 class RegistrasiKeluarga extends StatefulWidget {
   const RegistrasiKeluarga({Key? key}) : super(key: key);
 
@@ -22,6 +23,7 @@ class RegistrasiKeluarga extends StatefulWidget {
 
 class _RegistrasiKeluargaState extends State<RegistrasiKeluarga> {
   int activeStep = 0;
+  int stepsBound = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -137,7 +139,9 @@ class _RegistrasiKeluargaState extends State<RegistrasiKeluarga> {
                               ),
                               onPressed: () {
                                 setState(() {
-                                  activeStep--;
+                                  if (activeStep > 0) {
+                                    activeStep--;
+                                  }
                                 });
                               },
                             ),
@@ -162,7 +166,9 @@ class _RegistrasiKeluargaState extends State<RegistrasiKeluarga> {
                                     ),
                               onPressed: () {
                                 setState(() {
-                                  activeStep++;
+                                  if (activeStep < stepsBound) {
+                                    activeStep++;
+                                  }
                                 });
                               }),
                         ]),
