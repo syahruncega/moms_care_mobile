@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:moms_care_mobile/components/custom_elevated_button_icon.dart';
 import 'package:moms_care_mobile/components/keluarga/anggota_keluarga_card.dart';
+import 'package:moms_care_mobile/pages/keluarga/tambah_anggota_keluarga_screen.dart';
 
 import '../../components/custom_appBar.dart';
 import '../../consts/colors.dart';
@@ -12,6 +13,7 @@ class AnggotaKeluargaScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: backgroundScaffold,
       body: Padding(
@@ -21,10 +23,10 @@ class AnggotaKeluargaScreen extends StatelessWidget {
           children: <Widget>[
             appBar(),
             Row(
-              children: const <Widget>[
+              children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(top: 35, left: 18),
-                  child: Text(
+                  padding: EdgeInsets.only(top: size.height * 0.04, left: 18),
+                  child: const Text(
                     'Anggota Keluarga',
                     style: TextStyle(
                       fontSize: 24,
@@ -51,7 +53,14 @@ class AnggotaKeluargaScreen extends StatelessWidget {
                       color: Colors.white,
                     ),
                     backgroundColor: colorSecondary,
-                    onPressed: () => 1,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const TambahAnggotaKeluargaScreen()),
+                      );
+                    },
                   ),
                 ),
               ],

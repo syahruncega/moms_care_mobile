@@ -12,6 +12,7 @@ class DashboardKeluargaScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: backgroundScaffold,
       body: Padding(
@@ -21,10 +22,10 @@ class DashboardKeluargaScreen extends StatelessWidget {
           children: <Widget>[
             appBar(),
             Row(
-              children: const <Widget>[
+              children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(top: 35, left: 18),
-                  child: Text(
+                  padding: EdgeInsets.only(top: size.height * 0.04, left: 18),
+                  child: const Text(
                     'Dashboard',
                     style: TextStyle(
                       fontSize: 24,
