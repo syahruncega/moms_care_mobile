@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:moms_care_mobile/components/custom_elevated_button_icon.dart';
+import 'package:moms_care_mobile/components/custom_modal.dart';
 import 'package:moms_care_mobile/components/keluarga/anggota_keluarga_card.dart';
 import 'package:moms_care_mobile/pages/keluarga/tambah_anggota_keluarga_screen.dart';
 
@@ -65,7 +66,7 @@ class AnggotaKeluargaScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const AnggotaKeluargaCard(
+            AnggotaKeluargaCard(
               title: "Kepala Keluarga",
               nama: "Kevin",
               isValidated: true,
@@ -74,6 +75,8 @@ class AnggotaKeluargaScreen extends StatelessWidget {
               umur: "24 Tahun, 1 Bulan",
               alamat: "Palu",
               anggotaId: 3,
+              onTap: () => showDialog(
+                  context: context, builder: (_) => const CustomModal()),
             ),
           ],
         ),
