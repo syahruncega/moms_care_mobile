@@ -25,11 +25,13 @@ class CustomRadioInput extends StatelessWidget {
     return Column(
       children: <Widget>[
         Row(children: <Widget>[
-          Text(
-            title,
-            style: const TextStyle(
-              fontFamily: fontNunito,
-              fontWeight: FontWeight.w600,
+          Flexible(
+            child: Text(
+              title,
+              style: const TextStyle(
+                fontFamily: fontNunito,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
           if (isRequired)

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moms_care_mobile/pages/keluarga/anggota_keluarga_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/dashboard_keluarga_screen.dart';
+import 'package:moms_care_mobile/pages/keluarga/deteksi_stunting_screen.dart';
 
 import '../components/custom_appBar.dart';
 import '../components/custom_drawer.dart';
@@ -65,7 +66,7 @@ class _LayoutState extends State<Layout> {
           break;
         case DrawerIndex.deteksiStunting:
           setState(() {
-            screenView = Container(); //MySecondScreen();
+            screenView = const DeteksiStuntingScreen(); //MySecondScreen();
           });
           break;
         case DrawerIndex.momsCare:

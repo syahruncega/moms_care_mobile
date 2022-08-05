@@ -5,8 +5,8 @@ import 'package:moms_care_mobile/components/custom_elevated_button_icon.dart';
 import 'package:moms_care_mobile/consts/colors.dart';
 import 'package:moms_care_mobile/consts/fonts.dart';
 
-class CustomModal extends StatelessWidget {
-  const CustomModal({Key? key}) : super(key: key);
+class DetailKeluargaModal extends StatelessWidget {
+  const DetailKeluargaModal({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -1194,7 +1194,7 @@ class CustomModal extends StatelessWidget {
                     height: 25,
                     color: Colors.white,
                   ),
-                  backgroundColor: Colors.red.withOpacity(0.8),
+                  backgroundColor: Colors.red,
                   onPressed: () => Navigator.pop(context),
                 ),
               )
