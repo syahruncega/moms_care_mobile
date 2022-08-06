@@ -1,7 +1,4 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../consts/colors.dart';
 import '../../consts/fonts.dart';
@@ -102,25 +99,7 @@ class CardDashboard extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: button
-                            // <Widget>[
-                            //   ElevatedButton(
-                            //     style: ButtonStyle(
-                            //       backgroundColor:
-                            //           MaterialStateProperty.all<Color>(
-                            //               cardBtnColor),
-                            //       shape: MaterialStateProperty.all<
-                            //           RoundedRectangleBorder>(
-                            //         RoundedRectangleBorder(
-                            //           borderRadius: BorderRadius.circular(20),
-                            //         ),
-                            //       ),
-                            //     ),
-                            //     onPressed: () {},
-                            //     child: Text(cardBtnTitle),
-                            //   )
-                            // ],
-                            ),
+                            children: button),
                       )
                     ],
                   ),

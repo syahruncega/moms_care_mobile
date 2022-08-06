@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../consts/colors.dart';
-import 'card_dashboard.dart';
+import '../dashboard/card_dashboard.dart';
 
 class KeluargaDashboard extends StatelessWidget {
   const KeluargaDashboard({

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../consts/colors.dart';
-import '../consts/fonts.dart';
+import '../../consts/colors.dart';
+import '../../consts/fonts.dart';
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer(
@@ -191,7 +191,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
   }
 
   void onTapped() {
-    print('Doing Something...'); // Print to console.
+    debugPrint('Doing Something...'); // Print to console.
   }
 
   Widget inkwell(DrawerList listData) {
