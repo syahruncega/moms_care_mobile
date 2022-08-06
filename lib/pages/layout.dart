@@ -4,9 +4,9 @@ import 'package:moms_care_mobile/pages/keluarga/dashboard_keluarga_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/deteksi_stunting_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/moms_care_screen.dart';
 
-import '../components/custom_appBar.dart';
-import '../components/custom_drawer.dart';
-import '../components/drawer_controller.dart';
+import '../components/util/custom_appBar.dart';
+import '../components/util/custom_drawer.dart';
+import '../components/util/drawer_controller.dart';
 import '../consts/colors.dart';
 
 class Layout extends StatefulWidget {

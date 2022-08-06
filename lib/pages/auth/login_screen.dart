@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
-import 'package:moms_care_mobile/components/custom_elevated_button_icon.dart';
-import 'package:moms_care_mobile/components/custom_text_field.dart';
+import 'package:moms_care_mobile/components/util/custom_elevated_button_icon.dart';
+import 'package:moms_care_mobile/components/util/custom_text_field.dart';
 import 'package:moms_care_mobile/consts/fonts.dart';
 import '../../consts/colors.dart';
 

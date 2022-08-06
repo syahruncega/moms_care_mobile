@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:im_stepper/stepper.dart';
 import 'package:lottie/lottie.dart';
-import 'package:moms_care_mobile/components/custom_autocompleted_textfield.dart';
-import 'package:moms_care_mobile/components/custom_checkbox_input.dart';
-import 'package:moms_care_mobile/components/custom_file_upload.dart';
-import 'package:moms_care_mobile/components/custom_radio_input.dart';
+import 'package:moms_care_mobile/components/util/custom_autocompleted_textfield.dart';
+import 'package:moms_care_mobile/components/util/custom_checkbox_input.dart';
+import 'package:moms_care_mobile/components/util/custom_file_upload.dart';
+import 'package:moms_care_mobile/components/util/custom_radio_input.dart';
 
-import '../../components/custom_elevated_button_icon.dart';
-import '../../components/custom_text_field.dart';
+import '../../components/util/custom_elevated_button_icon.dart';
+import '../../components/util/custom_text_field.dart';
 import '../../consts/colors.dart';
 import '../../consts/fonts.dart';
 
