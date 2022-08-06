@@ -1,6 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
-import '../consts/colors.dart';
+import '../../consts/colors.dart';
 import 'custom_drawer.dart';
 
 class CustomDrawerController extends StatefulWidget {
@@ -122,7 +124,9 @@ class _CustomDrawerControllerState extends State<CustomDrawerController>
                           onDrawerClick();
                           try {
                             widget.onDrawerCall!(indexType);
-                          } catch (e) {}
+                          } catch (e) {
+                            log(e.toString());
+                          }
                         },
                       ),
                     );
