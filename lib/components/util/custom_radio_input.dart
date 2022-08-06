@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../consts/colors.dart';
 import '../../consts/fonts.dart';
 
 class CustomRadioInput extends StatelessWidget {

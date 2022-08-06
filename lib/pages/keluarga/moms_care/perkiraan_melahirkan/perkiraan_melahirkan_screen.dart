@@ -3,13 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:moms_care_mobile/components/keluarga/moms_care/perkiraan_melahirkan/detail_perkiraan_melahirkan_modal.dart';
 import 'package:moms_care_mobile/components/keluarga/moms_care/perkiraan_melahirkan/perkiraan_melahirkan_card.dart';
 import 'package:moms_care_mobile/components/keluarga/moms_care/perkiraan_melahirkan/tambah_perkiraan_melahirkan_modal.dart';
-import 'package:moms_care_mobile/components/keluarga/deteksi_stunting/stunting_anak/tambah_stunting_anak_modal.dart';
 
-import '../../components/util/custom_elevated_button_icon.dart';
-import '../../components/keluarga/deteksi_stunting/stunting_anak/detail_stunting_anak_modal.dart';
-import '../../components/keluarga/deteksi_stunting/stunting_anak/stunting_anak_card.dart';
-import '../../consts/colors.dart';
-import '../../consts/fonts.dart';
+import '../../../../components/util/custom_elevated_button_icon.dart';
+
+import '../../../../consts/colors.dart';
+import '../../../../consts/fonts.dart';
 
 class PerkiraanMelahirkanScreen extends StatelessWidget {
   const PerkiraanMelahirkanScreen({Key? key}) : super(key: key);

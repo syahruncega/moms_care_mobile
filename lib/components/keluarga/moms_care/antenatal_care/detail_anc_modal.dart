@@ -5,7 +5,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../consts/colors.dart';
 import '../../../../consts/fonts.dart';
 import '../../../util/custom_elevated_button_icon.dart';
-import '../../../util/custom_radio_input.dart';
 
 class DetailAncModal extends StatelessWidget {
   const DetailAncModal({Key? key}) : super(key: key);

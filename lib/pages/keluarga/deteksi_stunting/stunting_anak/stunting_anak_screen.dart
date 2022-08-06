@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:moms_care_mobile/components/keluarga/deteksi_stunting/stunting_anak/tambah_stunting_anak_modal.dart';
 
-import '../../components/util/custom_elevated_button_icon.dart';
-import '../../components/keluarga/deteksi_stunting/stunting_anak/detail_stunting_anak_modal.dart';
-import '../../components/keluarga/deteksi_stunting/stunting_anak/stunting_anak_card.dart';
-import '../../consts/colors.dart';
-import '../../consts/fonts.dart';
+import '../../../../components/util/custom_elevated_button_icon.dart';
+import '../../../../components/keluarga/deteksi_stunting/stunting_anak/detail_stunting_anak_modal.dart';
+import '../../../../components/keluarga/deteksi_stunting/stunting_anak/stunting_anak_card.dart';
+import '../../../../consts/colors.dart';
+import '../../../../consts/fonts.dart';
 
 class StuntingAnakScreen extends StatelessWidget {
   const StuntingAnakScreen({Key? key}) : super(key: key);

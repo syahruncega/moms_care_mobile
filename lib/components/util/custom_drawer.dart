@@ -191,7 +191,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
   }
 
   void onTapped() {
-    print('Doing Something...'); // Print to console.
+    debugPrint('Doing Something...'); // Print to console.
   }
 
   Widget inkwell(DrawerList listData) {

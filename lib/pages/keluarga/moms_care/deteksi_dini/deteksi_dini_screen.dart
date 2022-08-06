@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:moms_care_mobile/components/keluarga/moms_care/deteksi_dini/detail_deteksi_dini_modal.dart';
-import 'package:moms_care_mobile/components/keluarga/moms_care/perkiraan_melahirkan/detail_perkiraan_melahirkan_modal.dart';
 import 'package:moms_care_mobile/components/keluarga/moms_care/deteksi_dini/deteksi_dini_card.dart';
-import 'package:moms_care_mobile/components/keluarga/moms_care/perkiraan_melahirkan/perkiraan_melahirkan_card.dart';
 import 'package:moms_care_mobile/components/keluarga/moms_care/deteksi_dini/tambah_deteksi_dini_modal.dart';
-import 'package:moms_care_mobile/components/keluarga/moms_care/perkiraan_melahirkan/tambah_perkiraan_melahirkan_modal.dart';
 
-import '../../components/util/custom_elevated_button_icon.dart';
-import '../../consts/colors.dart';
-import '../../consts/fonts.dart';
+import '../../../../components/util/custom_elevated_button_icon.dart';
+import '../../../../consts/colors.dart';
+import '../../../../consts/fonts.dart';
 
 class DeteksiDiniScreen extends StatelessWidget {
   const DeteksiDiniScreen({Key? key}) : super(key: key);

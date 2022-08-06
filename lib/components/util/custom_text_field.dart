@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:moms_care_mobile/consts/colors.dart';
 import 'package:moms_care_mobile/consts/fonts.dart';
 
 class CustomTextField extends StatelessWidget {

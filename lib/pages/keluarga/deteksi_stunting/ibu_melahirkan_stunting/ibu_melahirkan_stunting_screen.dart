@@ -3,13 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:moms_care_mobile/components/keluarga/deteksi_stunting/ibu_melahirkan_stunting/detail_ibu_melahirkan_stunting_modal.dart';
 import 'package:moms_care_mobile/components/keluarga/deteksi_stunting/ibu_melahirkan_stunting/ibu_melahirkan_stunting_card.dart';
 import 'package:moms_care_mobile/components/keluarga/deteksi_stunting/ibu_melahirkan_stunting/tambah_ibu_melahirkan_stunting_modal.dart';
-import 'package:moms_care_mobile/components/keluarga/deteksi_stunting/stunting_anak/tambah_stunting_anak_modal.dart';
 
-import '../../components/util/custom_elevated_button_icon.dart';
-import '../../components/keluarga/deteksi_stunting/stunting_anak/detail_stunting_anak_modal.dart';
-import '../../components/keluarga/deteksi_stunting/stunting_anak/stunting_anak_card.dart';
-import '../../consts/colors.dart';
-import '../../consts/fonts.dart';
+import '../../../../components/util/custom_elevated_button_icon.dart';
+import '../../../../consts/colors.dart';
+import '../../../../consts/fonts.dart';
 
 class IbuMelahirkanStuntingScreen extends StatelessWidget {
   const IbuMelahirkanStuntingScreen({Key? key}) : super(key: key);

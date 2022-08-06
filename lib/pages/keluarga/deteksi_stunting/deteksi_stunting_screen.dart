@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
-import 'package:moms_care_mobile/pages/keluarga/ibu_melahirkan_stunting_screen.dart';
-import 'package:moms_care_mobile/pages/keluarga/stunting_anak_screen.dart';
+import 'package:moms_care_mobile/pages/keluarga/deteksi_stunting/ibu_melahirkan_stunting/ibu_melahirkan_stunting_screen.dart';
+import 'package:moms_care_mobile/pages/keluarga/deteksi_stunting/stunting_anak/stunting_anak_screen.dart';
 
-import '../../components/util/custom_appBar.dart';
-import '../../consts/colors.dart';
-import '../../consts/fonts.dart';
+import '../../../components/util/custom_appbar.dart';
+import '../../../consts/colors.dart';
+import '../../../consts/fonts.dart';
 
 class DeteksiStuntingScreen extends StatefulWidget {
   const DeteksiStuntingScreen({Key? key}) : super(key: key);
@@ -27,7 +27,7 @@ class _DeteksiStuntingScreenState extends State<DeteksiStuntingScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            appBar(),
+            appbar(),
             SizedBox(height: size.height * 0.01),
             SizedBox(
               height: 200,

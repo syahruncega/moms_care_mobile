@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
-import 'package:moms_care_mobile/pages/keluarga/antenatal_care_screen.dart';
-import 'package:moms_care_mobile/pages/keluarga/deteksi_dini_screen.dart';
-import 'package:moms_care_mobile/pages/keluarga/ibu_melahirkan_stunting_screen.dart';
-import 'package:moms_care_mobile/pages/keluarga/perkiraan_melahirkan_screen.dart';
-import 'package:moms_care_mobile/pages/keluarga/stunting_anak_screen.dart';
+import 'package:moms_care_mobile/pages/keluarga/moms_care/antenatal_care/antenatal_care_screen.dart';
+import 'package:moms_care_mobile/pages/keluarga/moms_care/deteksi_dini/deteksi_dini_screen.dart';
+import 'package:moms_care_mobile/pages/keluarga/moms_care/perkiraan_melahirkan/perkiraan_melahirkan_screen.dart';
 
-import '../../components/util/custom_appBar.dart';
-import '../../consts/colors.dart';
-import '../../consts/fonts.dart';
+import '../../../components/util/custom_appbar.dart';
+import '../../../consts/colors.dart';
+import '../../../consts/fonts.dart';
 
 class MomsCareScreen extends StatefulWidget {
   const MomsCareScreen({Key? key}) : super(key: key);
@@ -30,7 +28,7 @@ class _MomsCareScreenState extends State<MomsCareScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            appBar(),
+            appbar(),
             SizedBox(height: size.height * 0.01),
             SizedBox(
               height: 200,

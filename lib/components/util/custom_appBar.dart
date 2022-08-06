@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../../consts/colors.dart';
 
-Widget appBar() {
+Widget appbar() {
   return Material(
     elevation: 2,
     child: SizedBox(
@@ -34,7 +33,7 @@ Widget appBar() {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 8, right: 8),
-            child: Container(
+            child: SizedBox(
               width: AppBar().preferredSize.height - 8,
               height: AppBar().preferredSize.height - 8,
               // color: Colors.white,

@@ -3,11 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:moms_care_mobile/components/util/custom_elevated_button_icon.dart';
 import 'package:moms_care_mobile/components/keluarga/anggota_keluarga/detail_keluarga_modal.dart';
 import 'package:moms_care_mobile/components/keluarga/anggota_keluarga/anggota_keluarga_card.dart';
-import 'package:moms_care_mobile/pages/keluarga/tambah_anggota_keluarga_screen.dart';
+import 'package:moms_care_mobile/pages/keluarga/anggota_keluarga/tambah_anggota_keluarga_screen.dart';
 
-import '../../components/util/custom_appBar.dart';
-import '../../consts/colors.dart';
-import '../../consts/fonts.dart';
+import '../../../components/util/custom_appbar.dart';
+import '../../../consts/colors.dart';
+import '../../../consts/fonts.dart';
 
 class AnggotaKeluargaScreen extends StatelessWidget {
   const AnggotaKeluargaScreen({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class AnggotaKeluargaScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            appBar(),
+            appbar(),
             Row(
               children: <Widget>[
                 Padding(

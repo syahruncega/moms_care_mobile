@@ -1,7 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_svg/parser.dart';
 import 'package:moms_care_mobile/consts/colors.dart';
 import 'package:moms_care_mobile/consts/fonts.dart';
 
