@@ -80,7 +80,7 @@ class _CustomDrawerControllerState extends State<CustomDrawerController>
             curve: Curves.fastOutSlowIn);
       }
     });
-    WidgetsBinding.instance?.addPostFrameCallback((_) => getInitState());
+    WidgetsBinding.instance.addPostFrameCallback((_) => getInitState());
     super.initState();
   }
 
