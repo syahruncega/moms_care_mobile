@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moms_care_mobile/pages/bidan/dashboard/dashboard_bidan_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/anggota_keluarga/anggota_keluarga_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/dashboard/dashboard_keluarga_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/deteksi_stunting/deteksi_stunting_screen.dart';
@@ -8,6 +9,7 @@ import 'package:moms_care_mobile/pages/keluarga/tumbuh_kembang/tumbuh_kembang_sc
 import '../components/util/custom_drawer.dart';
 import '../components/util/drawer_controller.dart';
 import '../consts/colors.dart';
+import 'bidan/deteksi_stunting/bidan_deteksi_stunting_screen.dart';
 
 class Layout extends StatefulWidget {
   const Layout({Key? key}) : super(key: key);
@@ -19,11 +21,23 @@ class Layout extends StatefulWidget {
 class _LayoutState extends State<Layout> {
   Widget? screenView;
   DrawerIndex? drawerIndex;
+  int role = 2;
 
   @override
   void initState() {
     drawerIndex = DrawerIndex.dashboard;
-    screenView = const DashboardKeluargaScreen(); //const Dashboard();
+    switch (role) {
+      case 1:
+        screenView = const DashboardKeluargaScreen();
+        break;
+      case 2:
+        screenView = const DashboardBidanScreen();
+        break;
+      default:
+        screenView =
+            const DashboardKeluargaScreen(); // change to dashboard penyuluh
+    }
+
     super.initState();
   }
 
@@ -40,7 +54,7 @@ class _LayoutState extends State<Layout> {
             screenIndex: drawerIndex,
             drawerWidth: MediaQuery.of(context).size.width * 0.75,
             onDrawerCall: (DrawerIndex drawerIndexdata) {
-              changeIndex(drawerIndexdata);
+              changeIndex(drawerIndexdata, role: role);
               //callback from drawer for replace screen as user need with passing DrawerIndex(Enum index)
             },
             screenView: screenView,
@@ -51,37 +65,81 @@ class _LayoutState extends State<Layout> {
     );
   }
 
-  void changeIndex(DrawerIndex drawerIndexdata) {
+  /// params
+  /// 1 => keluarga
+  /// 2 => bidan
+  /// 3 => penyuluh
+  void changeIndex(DrawerIndex drawerIndexdata, {required int role}) {
     if (drawerIndex != drawerIndexdata) {
       drawerIndex = drawerIndexdata;
-      switch (drawerIndex) {
-        case DrawerIndex.dashboard:
-          setState(() {
-            screenView = const DashboardKeluargaScreen(); //const Dashboard();
-          });
+
+      switch (role) {
+        //keluarga
+        case 1:
+          switch (drawerIndex) {
+            case DrawerIndex.dashboard:
+              setState(() {
+                screenView = const DashboardKeluargaScreen();
+              });
+              break;
+            case DrawerIndex.anggotaKeluarga:
+              setState(() {
+                screenView = const AnggotaKeluargaScreen();
+              });
+              break;
+            case DrawerIndex.deteksiStunting:
+              setState(() {
+                screenView = const DeteksiStuntingScreen();
+              });
+              break;
+            case DrawerIndex.momsCare:
+              setState(() {
+                screenView = const MomsCareScreen();
+              });
+              break;
+            case DrawerIndex.tumbuhKembang:
+              setState(() {
+                screenView = const TumbuhKembangScreen();
+              });
+              break;
+            default:
+              break;
+          }
           break;
-        case DrawerIndex.anggotaKeluarga:
-          setState(() {
-            screenView = const AnggotaKeluargaScreen(); //MySecondScreen();
-          });
-          break;
-        case DrawerIndex.deteksiStunting:
-          setState(() {
-            screenView = const DeteksiStuntingScreen(); //MySecondScreen();
-          });
-          break;
-        case DrawerIndex.momsCare:
-          setState(() {
-            screenView = const MomsCareScreen(); //MySecondScreen();
-          });
-          break;
-        case DrawerIndex.tumbuhKembang:
-          setState(() {
-            screenView = const TumbuhKembangScreen(); //MySecondScreen();
-          });
+        //bidan
+        case 2:
+          switch (drawerIndex) {
+            case DrawerIndex.dashboard:
+              setState(() {
+                screenView = const DashboardBidanScreen();
+              });
+              break;
+            case DrawerIndex.deteksiStunting:
+              setState(() {
+                screenView = const BidanDeteksiStuntingScreen();
+              });
+              break;
+            case DrawerIndex.momsCare:
+              setState(() {
+                screenView = const MomsCareScreen();
+              });
+              break;
+            case DrawerIndex.tumbuhKembang:
+              setState(() {
+                screenView = const TumbuhKembangScreen();
+              });
+              break;
+            case DrawerIndex.randaKabilasa:
+              setState(() {
+                screenView = const AnggotaKeluargaScreen();
+              });
+              break;
+            default:
+              break;
+          }
           break;
         default:
-          break;
+        //penyuluh
       }
     }
   }
