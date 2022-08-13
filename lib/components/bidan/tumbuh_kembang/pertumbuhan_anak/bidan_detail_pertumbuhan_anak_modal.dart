@@ -2,12 +2,12 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
-import 'package:moms_care_mobile/components/bidan/tumbuh_kembang/ubah_pertumbuhan_anak_modal.dart';
+import 'package:moms_care_mobile/components/bidan/tumbuh_kembang/pertumbuhan_anak/ubah_pertumbuhan_anak_modal.dart';
 
-import '../../../../consts/colors.dart';
-import '../../../../consts/fonts.dart';
-import '../../util/custom_dialog.dart';
-import '../../util/custom_elevated_button_icon.dart';
+import '../../../../../consts/colors.dart';
+import '../../../../../consts/fonts.dart';
+import '../../../util/custom_dialog.dart';
+import '../../../util/custom_elevated_button_icon.dart';
 
 class BidanDetailPertumbuhanAnakModal extends StatelessWidget {
   const BidanDetailPertumbuhanAnakModal({Key? key}) : super(key: key);

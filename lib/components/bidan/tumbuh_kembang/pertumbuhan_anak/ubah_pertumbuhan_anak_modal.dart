@@ -6,10 +6,10 @@ import 'package:moms_care_mobile/components/util/custom_text_field.dart';
 
 import '../../../../../consts/colors.dart';
 import '../../../../../consts/fonts.dart';
-import '../../util/custom_elevated_button_icon.dart';
+import '../../../util/custom_elevated_button_icon.dart';
 
-class FilterPertumbuhanAnakModal extends StatelessWidget {
-  const FilterPertumbuhanAnakModal({Key? key}) : super(key: key);
+class UbahPertumbuhanAnakModal extends StatelessWidget {
+  const UbahPertumbuhanAnakModal({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class FilterPertumbuhanAnakModal extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const <Widget>[
                   Text(
-                    'Filter Pertumbuhan Anak',
+                    'Ubah Pertumbuhan Anak',
                     style: TextStyle(
                         fontFamily: fontNunito,
                         fontWeight: FontWeight.w600,
@@ -51,36 +51,55 @@ class FilterPertumbuhanAnakModal extends StatelessWidget {
                   padding: const EdgeInsets.all(12.0),
                   child: Column(children: <Widget>[
                     CustomAutocompletedTextField(
-                      title: 'Status',
-                      hintText: 'Semua',
+                      title: 'Nama Kepala Keluarga / Nomor KK',
+                      hintText: '- Pilih salah satu -',
                       controller: TextEditingController(),
+                      isRequired: true,
                       items: const [
-                        {'label': 'Semua', 'value': 'semua'},
-                        {'label': 'Tervalidasi', 'value': 'tervalidasi'},
-                        {
-                          'label': 'Belum Tervalidasi',
-                          'value': 'belum_tervalidasi'
-                        },
-                        {'label': 'Ditolak', 'value': 'ditolak'},
+                        {'label': 'Dummy Data', 'value': 'dummy-data'}
                       ],
                       onSuggestionSelected: (value) => value,
                     ),
-                    SizedBox(height: size.height * 0.02),
                     CustomAutocompletedTextField(
-                      title: 'Kategori',
-                      hintText: 'Semua',
+                      title: 'Nama Anak (Tanggal Lahir)',
+                      hintText: '- Pilih salah satu -',
                       controller: TextEditingController(),
+                      isRequired: true,
                       items: const [
-                        {'label': 'Semua', 'value': 'semua'},
-                        {'label': 'Gizi Buruk', 'value': 'gizi_buruk'},
-                        {'label': 'Gizi Kurang', 'value': 'gizi_kurang'},
-                        {'label': 'Gizi Baik', 'value': 'gizi_baik'},
-                        {'label': 'Gizi Lebih', 'value': 'gizi_lebih'},
+                        {'label': 'Dummy Data', 'value': 'dummy-data'}
                       ],
                       onSuggestionSelected: (value) => value,
+                    ),
+                    CustomTextField(
+                      title: "Berat Badan (Kg)",
+                      hintText: "Cth. 12",
+                      keyboardType: TextInputType.phone,
+                      textInputAction: TextInputAction.next,
+                      isRequired: true,
+                      suffixIcon: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        child: SvgPicture.asset(
+                          "assets/icons/weight.svg",
+                          height: 20,
+                        ),
+                      ),
                     ),
                   ]),
                 ),
+              ),
+              SizedBox(height: size.height * 0.02),
+              Row(
+                children: const [
+                  Flexible(
+                    child: Text(
+                      '* Nama Anak yang tampil hanya yang berumur dibawah 5 tahun (BALITA)',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: fontNunito,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),

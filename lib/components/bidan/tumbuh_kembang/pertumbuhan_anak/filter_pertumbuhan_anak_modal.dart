@@ -4,12 +4,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:moms_care_mobile/components/util/custom_autocompleted_textfield.dart';
 import 'package:moms_care_mobile/components/util/custom_text_field.dart';
 
-import '../../../../consts/colors.dart';
-import '../../../../consts/fonts.dart';
-import '../../util/custom_elevated_button_icon.dart';
+import '../../../../../../consts/colors.dart';
+import '../../../../../../consts/fonts.dart';
+import '../../../util/custom_elevated_button_icon.dart';
 
-class UbahPertumbuhanAnakModal extends StatelessWidget {
-  const UbahPertumbuhanAnakModal({Key? key}) : super(key: key);
+class FilterPertumbuhanAnakModal extends StatelessWidget {
+  const FilterPertumbuhanAnakModal({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class UbahPertumbuhanAnakModal extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const <Widget>[
                   Text(
-                    'Ubah Pertumbuhan Anak',
+                    'Filter Pertumbuhan Anak',
                     style: TextStyle(
                         fontFamily: fontNunito,
                         fontWeight: FontWeight.w600,
@@ -51,55 +51,36 @@ class UbahPertumbuhanAnakModal extends StatelessWidget {
                   padding: const EdgeInsets.all(12.0),
                   child: Column(children: <Widget>[
                     CustomAutocompletedTextField(
-                      title: 'Nama Kepala Keluarga / Nomor KK',
-                      hintText: '- Pilih salah satu -',
+                      title: 'Status',
+                      hintText: 'Semua',
                       controller: TextEditingController(),
-                      isRequired: true,
                       items: const [
-                        {'label': 'Dummy Data', 'value': 'dummy-data'}
+                        {'label': 'Semua', 'value': 'semua'},
+                        {'label': 'Tervalidasi', 'value': 'tervalidasi'},
+                        {
+                          'label': 'Belum Tervalidasi',
+                          'value': 'belum_tervalidasi'
+                        },
+                        {'label': 'Ditolak', 'value': 'ditolak'},
                       ],
                       onSuggestionSelected: (value) => value,
                     ),
+                    SizedBox(height: size.height * 0.02),
                     CustomAutocompletedTextField(
-                      title: 'Nama Anak (Tanggal Lahir)',
-                      hintText: '- Pilih salah satu -',
+                      title: 'Kategori',
+                      hintText: 'Semua',
                       controller: TextEditingController(),
-                      isRequired: true,
                       items: const [
-                        {'label': 'Dummy Data', 'value': 'dummy-data'}
+                        {'label': 'Semua', 'value': 'semua'},
+                        {'label': 'Gizi Buruk', 'value': 'gizi_buruk'},
+                        {'label': 'Gizi Kurang', 'value': 'gizi_kurang'},
+                        {'label': 'Gizi Baik', 'value': 'gizi_baik'},
+                        {'label': 'Gizi Lebih', 'value': 'gizi_lebih'},
                       ],
                       onSuggestionSelected: (value) => value,
-                    ),
-                    CustomTextField(
-                      title: "Berat Badan (Kg)",
-                      hintText: "Cth. 12",
-                      keyboardType: TextInputType.phone,
-                      textInputAction: TextInputAction.next,
-                      isRequired: true,
-                      suffixIcon: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 12),
-                        child: SvgPicture.asset(
-                          "assets/icons/weight.svg",
-                          height: 20,
-                        ),
-                      ),
                     ),
                   ]),
                 ),
-              ),
-              SizedBox(height: size.height * 0.02),
-              Row(
-                children: const [
-                  Flexible(
-                    child: Text(
-                      '* Nama Anak yang tampil hanya yang berumur dibawah 5 tahun (BALITA)',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontFamily: fontNunito,
-                      ),
-                    ),
-                  ),
-                ],
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),

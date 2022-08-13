@@ -4,7 +4,7 @@ import 'package:lottie/lottie.dart';
 import 'package:moms_care_mobile/pages/keluarga/tumbuh_kembang/perkembangan_anak/perkembangan_anak_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/tumbuh_kembang/pertumbuhan_anak/pertumbuhan_anak_screen.dart';
 
-import '../../../components/bidan/tumbuh_kembang/bidan_pertumbuhan_anak_screen.dart';
+import 'pertumbuhan_anak/bidan_pertumbuhan_anak_screen.dart';
 import '../../../components/util/custom_appbar.dart';
 import '../../../consts/colors.dart';
 import '../../../consts/fonts.dart';
