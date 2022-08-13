@@ -9,6 +9,7 @@ import 'package:moms_care_mobile/pages/keluarga/moms_care/perkiraan_melahirkan/p
 import '../../../components/util/custom_appbar.dart';
 import '../../../consts/colors.dart';
 import '../../../consts/fonts.dart';
+import 'deteksi_dini/bidan_deteksi_dini_screen.dart';
 
 class BidanMomsCareScreen extends StatefulWidget {
   const BidanMomsCareScreen({Key? key}) : super(key: key);
@@ -354,7 +355,7 @@ class _BidanMomsCareScreenState extends State<BidanMomsCareScreen> {
             (tabIndex == 0)
                 ? const BidanPerkiraanMelahirkanScreen()
                 : (tabIndex == 1)
-                    ? const DeteksiDiniScreen()
+                    ? const BidanDeteksiDiniScreen()
                     : const AntenatalCareScreen()
           ],
         ),
