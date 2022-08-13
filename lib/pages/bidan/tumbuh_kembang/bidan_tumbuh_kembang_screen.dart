@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
+import 'package:moms_care_mobile/pages/bidan/tumbuh_kembang/perkembangan_anak/perkembangan_anak_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/tumbuh_kembang/perkembangan_anak/perkembangan_anak_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/tumbuh_kembang/pertumbuhan_anak/pertumbuhan_anak_screen.dart';
 
@@ -327,7 +328,7 @@ class _BidanTumbuhKembangScreenState extends State<BidanTumbuhKembangScreen> {
             SizedBox(height: size.height * 0.02),
             tabIndex == 0
                 ? const BidanPertumbuhanAnakScreen()
-                : const PerkembanganAnakScreen()
+                : const BidanPerkembanganAnakScreen()
           ],
         ),
       ),
