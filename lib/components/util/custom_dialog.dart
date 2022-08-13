@@ -12,10 +12,12 @@ class CustomDialog extends StatelessWidget {
   final Widget img;
   final String title;
   final String message;
+  final Widget showModal;
   const CustomDialog({
     required this.img,
     required this.title,
     required this.message,
+    required this.showModal,
     Key? key,
   }) : super(key: key);
 
@@ -81,9 +83,7 @@ class CustomDialog extends StatelessWidget {
                       backgroundColor: Colors.blue,
                       onPressed: () {
                         Navigator.pop(context);
-                        showDialog(
-                            context: context,
-                            builder: (_) => const UbahStuntingAnakModal());
+                        showDialog(context: context, builder: (_) => showModal);
                       },
                     ),
                   ),

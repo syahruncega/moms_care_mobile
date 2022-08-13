@@ -2,15 +2,15 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
-import 'package:moms_care_mobile/components/bidan/deteksi_stunting/stunting_anak/ubah_stunting_anak_modal.dart';
-import 'package:moms_care_mobile/components/util/custom_dialog.dart';
+import 'package:moms_care_mobile/components/bidan/tumbuh_kembang/ubah_pertumbuhan_anak_modal.dart';
 
 import '../../../../consts/colors.dart';
 import '../../../../consts/fonts.dart';
-import '../../../util/custom_elevated_button_icon.dart';
+import '../../util/custom_dialog.dart';
+import '../../util/custom_elevated_button_icon.dart';
 
-class BidanDetailStuntingAnakModal extends StatelessWidget {
-  const BidanDetailStuntingAnakModal({Key? key}) : super(key: key);
+class BidanDetailPertumbuhanAnakModal extends StatelessWidget {
+  const BidanDetailPertumbuhanAnakModal({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
               Row(
                 children: const <Widget>[
                   Text(
-                    'Detail Stunting Anak',
+                    'Detail Pertumbuhan Anak',
                     style: TextStyle(
                         fontFamily: fontNunito,
                         fontWeight: FontWeight.w600,
@@ -38,9 +38,7 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
-                height: size.height * 0.02,
-              ),
+              SizedBox(height: size.height * 0.02),
               Row(
                 children: const [
                   Text(
@@ -52,7 +50,7 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '1 Agustus 2022',
+                    '30 Maret 2022',
                     style: TextStyle(
                       fontFamily: fontNunito,
                       fontSize: 14,
@@ -73,25 +71,24 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: SvgPicture.asset(
-                                "assets/icons/sad.svg",
+                                "assets/icons/happy.svg",
                                 color: Colors.white,
                                 height: 20,
                               ),
                             ),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5),
-                              color: cardDarkRed,
+                              color: colorPrimary,
                             ),
                           ),
                         ],
                       ),
                       SizedBox(width: size.width * 0.02),
                       const Flexible(
-                        flex: 2,
                         child: Text(
-                          'Sangat Pendek (Risiko Stunting Tinggi)',
+                          'Gizi Baik',
                           style: TextStyle(
-                              fontFamily: fontNunito, color: cardTextRed),
+                              fontFamily: fontNunito, color: colorPrimary),
                         ),
                       ),
                       SizedBox(width: size.width * 0.02),
@@ -99,7 +96,7 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                         child: Text(
                           'ZScore : -20.55',
                           style: TextStyle(
-                              fontFamily: fontNunito, color: cardTextRed),
+                              fontFamily: fontNunito, color: colorPrimary),
                         ),
                       ),
                     ],
@@ -107,9 +104,10 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                 ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7),
-                  color: Colors.red.withOpacity(0.3),
+                  color: colorPrimary.withOpacity(0.3),
                 ),
               ),
+              SizedBox(height: size.height * 0.01),
               SizedBox(height: size.height * 0.01),
               DottedBorder(
                 borderType: BorderType.RRect,
@@ -146,7 +144,7 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                               child: const Padding(
                                 padding: EdgeInsets.all(5.0),
                                 child: Text(
-                                  'VIDIA',
+                                  'FARA',
                                   style: TextStyle(
                                       fontFamily: fontNunito,
                                       fontWeight: FontWeight.bold,
@@ -167,10 +165,9 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                     Row(
                       children: <Widget>[
                         SvgPicture.asset(
-                          "assets/icons/person.svg",
+                          "assets/icons/child.svg",
                           height: 25,
                         ),
-                        SizedBox(width: size.width * 0.01),
                         const Text(
                           'Nama Ayah',
                           style: TextStyle(fontFamily: fontNunito),
@@ -183,7 +180,7 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                               child: const Padding(
                                 padding: EdgeInsets.all(5.0),
                                 child: Text(
-                                  'ILHAM',
+                                  'FARA',
                                   style: TextStyle(
                                       fontFamily: fontNunito,
                                       fontWeight: FontWeight.bold,
@@ -204,10 +201,9 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                     Row(
                       children: <Widget>[
                         SvgPicture.asset(
-                          "assets/icons/woman.svg",
+                          "assets/icons/child.svg",
                           height: 25,
                         ),
-                        SizedBox(width: size.width * 0.01),
                         const Text(
                           'Nama Ibu',
                           style: TextStyle(fontFamily: fontNunito),
@@ -220,7 +216,7 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                               child: const Padding(
                                 padding: EdgeInsets.all(5.0),
                                 child: Text(
-                                  'RIA',
+                                  'FARA',
                                   style: TextStyle(
                                       fontFamily: fontNunito,
                                       fontWeight: FontWeight.bold,
@@ -352,12 +348,12 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                     Row(
                       children: <Widget>[
                         SvgPicture.asset(
-                          "assets/icons/ruler.svg",
+                          "assets/icons/weight.svg",
                           height: 25,
                         ),
                         SizedBox(width: size.width * 0.01),
                         const Text(
-                          'Tinggi Badan',
+                          'Berat Badan',
                           style: TextStyle(fontFamily: fontNunito),
                         ),
                         SizedBox(width: size.width * 0.03),
@@ -368,7 +364,7 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                               child: const Padding(
                                 padding: EdgeInsets.all(5.0),
                                 child: Text(
-                                  '20 Cm',
+                                  '9 KG',
                                   style: TextStyle(
                                       fontFamily: fontNunito,
                                       fontWeight: FontWeight.bold,
@@ -426,12 +422,49 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                     Row(
                       children: <Widget>[
                         SvgPicture.asset(
+                          "assets/icons/form.svg",
+                          height: 25,
+                        ),
+                        SizedBox(width: size.width * 0.01),
+                        const Text(
+                          'Status',
+                          style: TextStyle(fontFamily: fontNunito),
+                        ),
+                        SizedBox(width: size.width * 0.03),
+                        Flexible(
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: Container(
+                              child: const Padding(
+                                padding: EdgeInsets.all(5.0),
+                                child: Text(
+                                  'TERVALIDASI',
+                                  style: TextStyle(
+                                      fontFamily: fontNunito,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 12),
+                                ),
+                              ),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: cardDarkGreen,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: size.height * 0.01),
+                    Row(
+                      children: <Widget>[
+                        SvgPicture.asset(
                           "assets/icons/date-input.svg",
                           height: 25,
                         ),
                         SizedBox(width: size.width * 0.01),
                         const Text(
-                          'Tanggal Diperiksa/validasi',
+                          'Tanggal Konfirmasi',
                           style: TextStyle(fontFamily: fontNunito),
                         ),
                         SizedBox(width: size.width * 0.03),
@@ -538,13 +571,13 @@ class BidanDetailStuntingAnakModal extends StatelessWidget {
                                   title: "Perhatian!",
                                   message:
                                       "Apabila mengubah data, maka jumlah usia anak tidak lagi berpatokan dari tanggal sekarang dengan tanggal lahir anak. Tetapi jumlah usia anak terhitung dari tanggal data ini dibuat dengan tanggal lahir anak.",
-                                  showModal: UbahStuntingAnakModal(),
+                                  showModal: UbahPertumbuhanAnakModal(),
                                 ));
                       },
                     ),
                   ),
                 ],
-              ),
+              )
             ]),
           ),
         ),

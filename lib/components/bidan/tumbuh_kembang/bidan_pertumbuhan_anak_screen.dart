@@ -2,22 +2,32 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
 import 'package:moms_care_mobile/components/bidan/deteksi_stunting/stunting_anak/filter_stunting_anak_modal.dart';
-import 'package:moms_care_mobile/components/bidan/deteksi_stunting/stunting_anak/ubah_stunting_anak_modal.dart';
+import 'package:moms_care_mobile/components/bidan/moms_care/perkiraan_melahirkan/filter_perkiraan_melahirkan_modal.dart';
+import 'package:moms_care_mobile/components/bidan/tumbuh_kembang/ubah_pertumbuhan_anak_modal.dart';
 import 'package:moms_care_mobile/components/keluarga/deteksi_stunting/stunting_anak/tambah_stunting_anak_modal.dart';
 import 'package:moms_care_mobile/components/util/custom_button_icon.dart';
 
 import '../../../../components/bidan/deteksi_stunting/stunting_anak/bidan_detail_stunting_anak_modal.dart';
 import '../../../../components/bidan/deteksi_stunting/stunting_anak/bidan_stunting_anak_card.dart';
 import '../../../../components/bidan/deteksi_stunting/stunting_anak/bidan_tambah_stunting_anak_modal.dart';
+import '../../../../components/bidan/moms_care/perkiraan_melahirkan/bidan_detail_perkiraan_melahirkan_modal.dart';
+import '../../../../components/bidan/moms_care/perkiraan_melahirkan/bidan_perkiraan_melahirkan_card.dart';
+import '../../../../components/bidan/moms_care/perkiraan_melahirkan/bidan_tambah_perkiraan_melahirkan_modal.dart';
+import '../../../../components/bidan/moms_care/perkiraan_melahirkan/ubah_perkiraan_melahirkan_modal.dart';
+import '../../../../components/keluarga/moms_care/perkiraan_melahirkan/tambah_perkiraan_melahirkan_modal.dart';
 import '../../../../components/util/custom_dialog.dart';
 import '../../../../components/util/custom_elevated_button_icon.dart';
 import '../../../../components/keluarga/deteksi_stunting/stunting_anak/detail_stunting_anak_modal.dart';
 import '../../../../components/keluarga/deteksi_stunting/stunting_anak/stunting_anak_card.dart';
 import '../../../../consts/colors.dart';
 import '../../../../consts/fonts.dart';
+import 'bidan_detail_pertumbuhan_anak_modal.dart';
+import 'bidan_pertumbuhan_anak_card.dart';
+import 'bidan_tambah_pertumbuhan_anak_modal.dart';
+import 'filter_pertumbuhan_anak_modal.dart';
 
-class BidanStuntingAnakScreen extends StatelessWidget {
-  const BidanStuntingAnakScreen({Key? key}) : super(key: key);
+class BidanPertumbuhanAnakScreen extends StatelessWidget {
+  const BidanPertumbuhanAnakScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +40,7 @@ class BidanStuntingAnakScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: size.height * 0.01, left: 18),
                 child: const Text(
-                  'Data Stunting Anak',
+                  'Data Pertumbuhan Anak',
                   style: TextStyle(
                     fontSize: 22,
                     fontFamily: fontNunito,
@@ -57,7 +67,8 @@ class BidanStuntingAnakScreen extends StatelessWidget {
                   onPressed: () {
                     showDialog(
                         context: context,
-                        builder: (_) => const BidanTambahStuntingAnakModal());
+                        builder: (_) =>
+                            const BidanTambahPertumbuhanAnakModal());
                   },
                 ),
               ),
@@ -74,7 +85,7 @@ class BidanStuntingAnakScreen extends StatelessWidget {
                   onPressed: () {
                     showDialog(
                         context: context,
-                        builder: (_) => const FilterStuntingAnakModal());
+                        builder: (_) => const FilterPertumbuhanAnakModal());
                   },
                 ),
               ),
@@ -111,41 +122,17 @@ class BidanStuntingAnakScreen extends StatelessWidget {
 
   Widget generateData(BuildContext context) {
     return Column(children: [
-      BidanStuntingAnakCard(
-        dateCreated: "21 Mei 2022",
-        dateValidated: "22 Mei 2022",
-        namaAnak: "VIDIA",
-        alamat: "JL. R.E. Martadinata - Tondo",
-        bidan: "YUNI",
-        isValidated: true,
-        kategori: "Sangat Pendek (Risiko Stunting Tinggi)",
-        onTap: () => showDialog(
-            context: context,
-            builder: (_) => const BidanDetailStuntingAnakModal()),
-        onEdit: () => showDialog(
-            context: context,
-            builder: (_) => CustomDialog(
-                  img: LottieBuilder.asset(
-                    "assets/anim/warning.json",
-                    height: 100,
-                  ),
-                  title: "Perhatian!",
-                  message:
-                      "Apabila mengubah data, maka jumlah usia anak tidak lagi berpatokan dari tanggal sekarang dengan tanggal lahir anak. Tetapi jumlah usia anak terhitung dari tanggal data ini dibuat dengan tanggal lahir anak.",
-                  showModal: UbahStuntingAnakModal(),
-                )),
-      ),
-      BidanStuntingAnakCard(
+      BidanPertumbuhanAnakCard(
         dateCreated: "21 Mei 2022",
         dateValidated: "22 Mei 2022",
         namaAnak: "VIDIA",
         alamat: "Palu",
         bidan: "YUNI",
-        isValidated: false,
-        kategori: "Sangat Pendek (Risiko Stunting Tinggi)",
+        isValidated: true,
+        kategori: "Gizi Lebih",
         onTap: () => showDialog(
             context: context,
-            builder: (_) => const BidanDetailStuntingAnakModal()),
+            builder: (_) => const BidanDetailPertumbuhanAnakModal()),
         onEdit: () => showDialog(
             context: context,
             builder: (_) => CustomDialog(
@@ -156,7 +143,31 @@ class BidanStuntingAnakScreen extends StatelessWidget {
                   title: "Perhatian!",
                   message:
                       "Apabila mengubah data, maka jumlah usia anak tidak lagi berpatokan dari tanggal sekarang dengan tanggal lahir anak. Tetapi jumlah usia anak terhitung dari tanggal data ini dibuat dengan tanggal lahir anak.",
-                  showModal: UbahStuntingAnakModal(),
+                  showModal: UbahPertumbuhanAnakModal(),
+                )),
+      ),
+      BidanPertumbuhanAnakCard(
+        dateCreated: "21 Mei 2022",
+        dateValidated: "22 Mei 2022",
+        namaAnak: "VIDIA",
+        alamat: "Palu",
+        bidan: "YUNI",
+        isValidated: true,
+        kategori: "Gizi Lebih",
+        onTap: () => showDialog(
+            context: context,
+            builder: (_) => const BidanDetailPertumbuhanAnakModal()),
+        onEdit: () => showDialog(
+            context: context,
+            builder: (_) => CustomDialog(
+                  img: LottieBuilder.asset(
+                    "assets/anim/warning.json",
+                    height: 100,
+                  ),
+                  title: "Perhatian!",
+                  message:
+                      "Apabila mengubah data, maka jumlah usia anak tidak lagi berpatokan dari tanggal sekarang dengan tanggal lahir anak. Tetapi jumlah usia anak terhitung dari tanggal data ini dibuat dengan tanggal lahir anak.",
+                  showModal: UbahPertumbuhanAnakModal(),
                 )),
       ),
     ]);

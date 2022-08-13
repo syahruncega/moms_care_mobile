@@ -11,6 +11,7 @@ import '../components/util/drawer_controller.dart';
 import '../consts/colors.dart';
 import 'bidan/deteksi_stunting/bidan_deteksi_stunting_screen.dart';
 import 'bidan/moms_care/bidan_moms_care_screen.dart';
+import 'bidan/tumbuh_kembang/bidan_tumbuh_kembang_screen.dart';
 
 class Layout extends StatefulWidget {
   const Layout({Key? key}) : super(key: key);
@@ -127,7 +128,7 @@ class _LayoutState extends State<Layout> {
               break;
             case DrawerIndex.tumbuhKembang:
               setState(() {
-                screenView = const TumbuhKembangScreen();
+                screenView = const BidanTumbuhKembangScreen();
               });
               break;
             case DrawerIndex.randaKabilasa:
