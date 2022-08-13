@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
-import 'package:moms_care_mobile/pages/keluarga/deteksi_stunting/ibu_melahirkan_stunting/ibu_melahirkan_stunting_screen.dart';
-import 'package:moms_care_mobile/pages/keluarga/deteksi_stunting/stunting_anak/stunting_anak_screen.dart';
+import 'package:moms_care_mobile/pages/bidan/moms_care/perkiraan_melahirkan/bidan_perkiraan_melahirkan_screen.dart';
+import 'package:moms_care_mobile/pages/keluarga/moms_care/antenatal_care/antenatal_care_screen.dart';
+import 'package:moms_care_mobile/pages/keluarga/moms_care/deteksi_dini/deteksi_dini_screen.dart';
+import 'package:moms_care_mobile/pages/keluarga/moms_care/perkiraan_melahirkan/perkiraan_melahirkan_screen.dart';
 
 import '../../../components/util/custom_appbar.dart';
 import '../../../consts/colors.dart';
 import '../../../consts/fonts.dart';
-import 'ibu_melahirkan_stunting/bidan_ibu_stunting_screen.dart';
-import 'stunting_anak/bidan_stunting_anak_screen.dart';
 
-class BidanDeteksiStuntingScreen extends StatefulWidget {
-  const BidanDeteksiStuntingScreen({Key? key}) : super(key: key);
+class BidanMomsCareScreen extends StatefulWidget {
+  const BidanMomsCareScreen({Key? key}) : super(key: key);
 
   @override
-  State<BidanDeteksiStuntingScreen> createState() =>
-      _BidanDeteksiStuntingScreenState();
+  State<BidanMomsCareScreen> createState() => _BidanMomsCareScreenState();
 }
 
-class _BidanDeteksiStuntingScreenState
-    extends State<BidanDeteksiStuntingScreen> {
+class _BidanMomsCareScreenState extends State<BidanMomsCareScreen> {
   int tabIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -29,6 +27,7 @@ class _BidanDeteksiStuntingScreenState
       body: Padding(
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             appbar(),
@@ -36,7 +35,7 @@ class _BidanDeteksiStuntingScreenState
             Padding(
               padding: const EdgeInsets.only(left: 17),
               child: const Text(
-                'Deteksi Stunting',
+                'Moms Care',
                 style: TextStyle(
                   fontSize: 24,
                   fontFamily: fontNunito,
@@ -258,7 +257,7 @@ class _BidanDeteksiStuntingScreenState
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: DefaultTabController(
-                length: 2,
+                length: 3,
                 child: Container(
                   height: 60,
                   decoration: BoxDecoration(
@@ -268,6 +267,7 @@ class _BidanDeteksiStuntingScreenState
                   child: Padding(
                     padding: const EdgeInsets.all(7.0),
                     child: TabBar(
+                      labelPadding: EdgeInsets.zero,
                       unselectedLabelColor: Colors.black,
                       onTap: (index) {
                         setState(() {
@@ -276,37 +276,65 @@ class _BidanDeteksiStuntingScreenState
                       },
                       tabs: <Widget>[
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             SvgPicture.asset(
-                              "assets/icons/child.svg",
+                              "assets/icons/pregnant.svg",
                               height: 25,
                               color:
                                   tabIndex == 0 ? Colors.white : Colors.black,
                             ),
-                            const Padding(
-                              padding: EdgeInsets.only(left: 4),
-                              child: Text(
-                                'Stunting Anak',
-                                style: TextStyle(
-                                    fontFamily: fontNunito, fontSize: 15),
+                            const Flexible(
+                              child: Center(
+                                child: Text(
+                                  'Perkiraan Melahirkan',
+                                  style: TextStyle(
+                                    fontFamily: fontNunito,
+                                    fontSize: 14,
+                                  ),
+                                ),
                               ),
                             ),
                           ],
                         ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            SvgPicture.asset(
+                              "assets/icons/find.svg",
+                              height: 25,
+                              color:
+                                  tabIndex != 1 ? Colors.black : Colors.white,
+                            ),
+                            const Flexible(
+                              child: Padding(
+                                padding: EdgeInsets.only(left: 4),
+                                child: Text(
+                                  'Deteksi Dini',
+                                  style: TextStyle(
+                                    fontFamily: fontNunito,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             SvgPicture.asset(
                               "assets/icons/woman.svg",
                               height: 25,
                               color:
-                                  tabIndex == 1 ? Colors.white : Colors.black,
+                                  tabIndex != 2 ? Colors.black : Colors.white,
                             ),
                             const Flexible(
                               child: Padding(
                                 padding: EdgeInsets.only(left: 4),
-                                child: Text('Ibu Melahirkan Stunting',
+                                child: Text('ANC',
                                     style: TextStyle(
-                                        fontFamily: fontNunito, fontSize: 15),
+                                        fontFamily: fontNunito, fontSize: 14),
                                     textAlign: TextAlign.center),
                               ),
                             ),
@@ -323,9 +351,11 @@ class _BidanDeteksiStuntingScreenState
               ),
             ),
             SizedBox(height: size.height * 0.02),
-            tabIndex == 0
-                ? const BidanStuntingAnakScreen()
-                : const BidanIbuStuntingScreen()
+            (tabIndex == 0)
+                ? const BidanPerkiraanMelahirkanScreen()
+                : (tabIndex == 1)
+                    ? const DeteksiDiniScreen()
+                    : const AntenatalCareScreen()
           ],
         ),
       ),
