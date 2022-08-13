@@ -59,6 +59,7 @@ class UbahPerkembanganAnakModal extends StatelessWidget {
                       ],
                       onSuggestionSelected: (value) => value,
                     ),
+                    SizedBox(height: size.height * 0.02),
                     CustomAutocompletedTextField(
                       title: 'Nama Anak (Tanggal Lahir)',
                       hintText: '- Pilih salah satu -',
