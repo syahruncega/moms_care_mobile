@@ -22,46 +22,91 @@ class CustomDrawer extends StatefulWidget {
 
 class _CustomDrawerState extends State<CustomDrawer> {
   List<DrawerList>? drawerList;
+  int role = 2;
   @override
   void initState() {
-    setDrawerListArray();
+    setDrawerListArray(role: role);
     super.initState();
   }
 
-  void setDrawerListArray() {
-    drawerList = <DrawerList>[
-      DrawerList(
-        index: DrawerIndex.dashboard,
-        labelName: 'Dashboard',
-        icon: const Icon(Icons.speed),
-      ),
-      DrawerList(
-        index: DrawerIndex.anggotaKeluarga,
-        labelName: 'Anggota Keluarga',
-        icon: const Icon(Icons.family_restroom_outlined),
-      ),
-      DrawerList(
-        index: DrawerIndex.deteksiStunting,
-        labelName: 'Deteksi Stunting',
-        icon: const Icon(
-          Icons.checklist_rtl_outlined,
-        ),
-      ),
-      DrawerList(
-        index: DrawerIndex.momsCare,
-        labelName: 'Moms Care',
-        icon: const Icon(
-          Icons.supervised_user_circle_outlined,
-        ),
-      ),
-      DrawerList(
-        index: DrawerIndex.tumbuhKembang,
-        labelName: 'Tumbuh Kembang',
-        icon: const Icon(
-          Icons.ssid_chart_outlined,
-        ),
-      ),
-    ];
+  void setDrawerListArray({required int role}) {
+    switch (role) {
+      case 1:
+        //keluarga
+        drawerList = <DrawerList>[
+          DrawerList(
+            index: DrawerIndex.dashboard,
+            labelName: 'Dashboard',
+            icon: const Icon(Icons.speed),
+          ),
+          DrawerList(
+            index: DrawerIndex.anggotaKeluarga,
+            labelName: 'Anggota Keluarga',
+            icon: const Icon(Icons.family_restroom_outlined),
+          ),
+          DrawerList(
+            index: DrawerIndex.deteksiStunting,
+            labelName: 'Deteksi Stunting',
+            icon: const Icon(
+              Icons.checklist_rtl_outlined,
+            ),
+          ),
+          DrawerList(
+            index: DrawerIndex.momsCare,
+            labelName: 'Moms Care',
+            icon: const Icon(
+              Icons.supervised_user_circle_outlined,
+            ),
+          ),
+          DrawerList(
+            index: DrawerIndex.tumbuhKembang,
+            labelName: 'Tumbuh Kembang',
+            icon: const Icon(
+              Icons.ssid_chart_outlined,
+            ),
+          ),
+        ];
+        break;
+      case 2:
+        //bidan
+        drawerList = <DrawerList>[
+          DrawerList(
+            index: DrawerIndex.dashboard,
+            labelName: 'Dashboard',
+            icon: const Icon(Icons.speed),
+          ),
+          DrawerList(
+            index: DrawerIndex.deteksiStunting,
+            labelName: 'Deteksi Stunting',
+            icon: const Icon(
+              Icons.checklist_rtl_outlined,
+            ),
+          ),
+          DrawerList(
+            index: DrawerIndex.momsCare,
+            labelName: 'Moms Care',
+            icon: const Icon(
+              Icons.supervised_user_circle_outlined,
+            ),
+          ),
+          DrawerList(
+            index: DrawerIndex.tumbuhKembang,
+            labelName: 'Tumbuh Kembang',
+            icon: const Icon(
+              Icons.ssid_chart_outlined,
+            ),
+          ),
+          DrawerList(
+            index: DrawerIndex.randaKabilasa,
+            labelName: 'Randa Kabilasa',
+            icon: const Icon(Icons.person),
+          ),
+        ];
+        break;
+      default:
+      //penyuluh
+
+    }
   }
 
   @override
@@ -308,6 +353,7 @@ enum DrawerIndex {
   deteksiStunting,
   momsCare,
   tumbuhKembang,
+  randaKabilasa,
 }
 
 class DrawerList {

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
-import 'package:moms_care_mobile/pages/keluarga/deteksi_stunting/ibu_melahirkan_stunting/ibu_melahirkan_stunting_screen.dart';
-import 'package:moms_care_mobile/pages/keluarga/deteksi_stunting/stunting_anak/stunting_anak_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/tumbuh_kembang/perkembangan_anak/perkembangan_anak_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/tumbuh_kembang/pertumbuhan_anak/pertumbuhan_anak_screen.dart';
 

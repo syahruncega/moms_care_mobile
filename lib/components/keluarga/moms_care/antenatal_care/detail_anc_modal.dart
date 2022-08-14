@@ -519,7 +519,7 @@ class DetailAncModal extends StatelessWidget {
                         ),
                         SizedBox(width: size.width * 0.01),
                         const Text(
-                          'Denyut Jantung',
+                          'Denyut Jantung Janin',
                           style: TextStyle(fontFamily: fontNunito),
                         ),
                         SizedBox(width: size.width * 0.03),
