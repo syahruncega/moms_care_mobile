@@ -40,11 +40,13 @@ class CustomAutocompletedTextField extends StatelessWidget {
       children: [
         if (title != null)
           Row(children: <Widget>[
-            Text(
-              title!,
-              style: const TextStyle(
-                fontFamily: fontNunito,
-                fontWeight: FontWeight.w700,
+            Flexible(
+              child: Text(
+                title!,
+                style: const TextStyle(
+                  fontFamily: fontNunito,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
             if (isRequired)

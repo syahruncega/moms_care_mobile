@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moms_care_mobile/pages/bidan/dashboard/dashboard_bidan_screen.dart';
+import 'package:moms_care_mobile/pages/bidan/randa_kabilasa/bidan_randa_kabilasa_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/anggota_keluarga/anggota_keluarga_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/dashboard/dashboard_keluarga_screen.dart';
 import 'package:moms_care_mobile/pages/keluarga/deteksi_stunting/deteksi_stunting_screen.dart';
@@ -133,7 +134,7 @@ class _LayoutState extends State<Layout> {
               break;
             case DrawerIndex.randaKabilasa:
               setState(() {
-                screenView = const AnggotaKeluargaScreen();
+                screenView = const BidanRandaKabilasaScreen();
               });
               break;
             default:
