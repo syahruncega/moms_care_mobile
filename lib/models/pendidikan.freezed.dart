@@ -22,6 +22,8 @@ Pendidikan _$PendidikanFromJson(Map<String, dynamic> json) {
 mixin _$Pendidikan {
   int get id => throw _privateConstructorUsedError;
   String get pendidikan => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
   DateTime? get deletedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +37,12 @@ abstract class $PendidikanCopyWith<$Res> {
   factory $PendidikanCopyWith(
           Pendidikan value, $Res Function(Pendidikan) then) =
       _$PendidikanCopyWithImpl<$Res>;
-  $Res call({int id, String pendidikan, DateTime? deletedAt});
+  $Res call(
+      {int id,
+      String pendidikan,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      DateTime? deletedAt});
 }
 
 /// @nodoc
@@ -50,6 +57,8 @@ class _$PendidikanCopyWithImpl<$Res> implements $PendidikanCopyWith<$Res> {
   $Res call({
     Object? id = freezed,
     Object? pendidikan = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
     Object? deletedAt = freezed,
   }) {
     return _then(_value.copyWith(
@@ -61,6 +70,14 @@ class _$PendidikanCopyWithImpl<$Res> implements $PendidikanCopyWith<$Res> {
           ? _value.pendidikan
           : pendidikan // ignore: cast_nullable_to_non_nullable
               as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
@@ -76,7 +93,12 @@ abstract class _$$_PendidikanCopyWith<$Res>
           _$_Pendidikan value, $Res Function(_$_Pendidikan) then) =
       __$$_PendidikanCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String pendidikan, DateTime? deletedAt});
+  $Res call(
+      {int id,
+      String pendidikan,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      DateTime? deletedAt});
 }
 
 /// @nodoc
@@ -93,6 +115,8 @@ class __$$_PendidikanCopyWithImpl<$Res> extends _$PendidikanCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? pendidikan = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
     Object? deletedAt = freezed,
   }) {
     return _then(_$_Pendidikan(
@@ -104,6 +128,14 @@ class __$$_PendidikanCopyWithImpl<$Res> extends _$PendidikanCopyWithImpl<$Res>
           ? _value.pendidikan
           : pendidikan // ignore: cast_nullable_to_non_nullable
               as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
@@ -116,7 +148,11 @@ class __$$_PendidikanCopyWithImpl<$Res> extends _$PendidikanCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Pendidikan implements _Pendidikan {
   const _$_Pendidikan(
-      {required this.id, required this.pendidikan, this.deletedAt});
+      {required this.id,
+      required this.pendidikan,
+      this.createdAt,
+      this.updatedAt,
+      this.deletedAt});
 
   factory _$_Pendidikan.fromJson(Map<String, dynamic> json) =>
       _$$_PendidikanFromJson(json);
@@ -126,11 +162,15 @@ class _$_Pendidikan implements _Pendidikan {
   @override
   final String pendidikan;
   @override
+  final DateTime? createdAt;
+  @override
+  final DateTime? updatedAt;
+  @override
   final DateTime? deletedAt;
 
   @override
   String toString() {
-    return 'Pendidikan(id: $id, pendidikan: $pendidikan, deletedAt: $deletedAt)';
+    return 'Pendidikan(id: $id, pendidikan: $pendidikan, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt)';
   }
 
   @override
@@ -141,6 +181,8 @@ class _$_Pendidikan implements _Pendidikan {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.pendidikan, pendidikan) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            const DeepCollectionEquality().equals(other.updatedAt, updatedAt) &&
             const DeepCollectionEquality().equals(other.deletedAt, deletedAt));
   }
 
@@ -150,6 +192,8 @@ class _$_Pendidikan implements _Pendidikan {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(pendidikan),
+      const DeepCollectionEquality().hash(createdAt),
+      const DeepCollectionEquality().hash(updatedAt),
       const DeepCollectionEquality().hash(deletedAt));
 
   @JsonKey(ignore: true)
@@ -169,6 +213,8 @@ abstract class _Pendidikan implements Pendidikan {
   const factory _Pendidikan(
       {required final int id,
       required final String pendidikan,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
       final DateTime? deletedAt}) = _$_Pendidikan;
 
   factory _Pendidikan.fromJson(Map<String, dynamic> json) =
@@ -178,6 +224,10 @@ abstract class _Pendidikan implements Pendidikan {
   int get id;
   @override
   String get pendidikan;
+  @override
+  DateTime? get createdAt;
+  @override
+  DateTime? get updatedAt;
   @override
   DateTime? get deletedAt;
   @override

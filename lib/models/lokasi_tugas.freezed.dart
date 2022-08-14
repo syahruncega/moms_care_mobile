@@ -20,7 +20,7 @@ LokasiTugas _$LokasiTugasFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$LokasiTugas {
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
   String get jenisProfil => throw _privateConstructorUsedError;
   String get profilId => throw _privateConstructorUsedError;
   String get desaKelurahanId => throw _privateConstructorUsedError;
@@ -29,6 +29,7 @@ mixin _$LokasiTugas {
   String get provinsiId => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
+  DateTime? get deletedAt => throw _privateConstructorUsedError;
   DesaKelurahan? get desaKelurahan => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -43,7 +44,7 @@ abstract class $LokasiTugasCopyWith<$Res> {
           LokasiTugas value, $Res Function(LokasiTugas) then) =
       _$LokasiTugasCopyWithImpl<$Res>;
   $Res call(
-      {int id,
+      {int? id,
       String jenisProfil,
       String profilId,
       String desaKelurahanId,
@@ -52,6 +53,7 @@ abstract class $LokasiTugasCopyWith<$Res> {
       String provinsiId,
       DateTime? createdAt,
       DateTime? updatedAt,
+      DateTime? deletedAt,
       DesaKelurahan? desaKelurahan});
 
   $DesaKelurahanCopyWith<$Res>? get desaKelurahan;
@@ -76,13 +78,14 @@ class _$LokasiTugasCopyWithImpl<$Res> implements $LokasiTugasCopyWith<$Res> {
     Object? provinsiId = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
+    Object? deletedAt = freezed,
     Object? desaKelurahan = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       jenisProfil: jenisProfil == freezed
           ? _value.jenisProfil
           : jenisProfil // ignore: cast_nullable_to_non_nullable
@@ -114,6 +117,10 @@ class _$LokasiTugasCopyWithImpl<$Res> implements $LokasiTugasCopyWith<$Res> {
       updatedAt: updatedAt == freezed
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      deletedAt: deletedAt == freezed
+          ? _value.deletedAt
+          : deletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       desaKelurahan: desaKelurahan == freezed
           ? _value.desaKelurahan
@@ -142,7 +149,7 @@ abstract class _$$_LokasiTugasCopyWith<$Res>
       __$$_LokasiTugasCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int id,
+      {int? id,
       String jenisProfil,
       String profilId,
       String desaKelurahanId,
@@ -151,6 +158,7 @@ abstract class _$$_LokasiTugasCopyWith<$Res>
       String provinsiId,
       DateTime? createdAt,
       DateTime? updatedAt,
+      DateTime? deletedAt,
       DesaKelurahan? desaKelurahan});
 
   @override
@@ -178,13 +186,14 @@ class __$$_LokasiTugasCopyWithImpl<$Res> extends _$LokasiTugasCopyWithImpl<$Res>
     Object? provinsiId = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
+    Object? deletedAt = freezed,
     Object? desaKelurahan = freezed,
   }) {
     return _then(_$_LokasiTugas(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       jenisProfil: jenisProfil == freezed
           ? _value.jenisProfil
           : jenisProfil // ignore: cast_nullable_to_non_nullable
@@ -217,6 +226,10 @@ class __$$_LokasiTugasCopyWithImpl<$Res> extends _$LokasiTugasCopyWithImpl<$Res>
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      deletedAt: deletedAt == freezed
+          ? _value.deletedAt
+          : deletedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       desaKelurahan: desaKelurahan == freezed
           ? _value.desaKelurahan
           : desaKelurahan // ignore: cast_nullable_to_non_nullable
@@ -229,7 +242,7 @@ class __$$_LokasiTugasCopyWithImpl<$Res> extends _$LokasiTugasCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_LokasiTugas implements _LokasiTugas {
   const _$_LokasiTugas(
-      {required this.id,
+      {this.id,
       required this.jenisProfil,
       required this.profilId,
       required this.desaKelurahanId,
@@ -238,13 +251,14 @@ class _$_LokasiTugas implements _LokasiTugas {
       required this.provinsiId,
       this.createdAt,
       this.updatedAt,
+      this.deletedAt,
       this.desaKelurahan});
 
   factory _$_LokasiTugas.fromJson(Map<String, dynamic> json) =>
       _$$_LokasiTugasFromJson(json);
 
   @override
-  final int id;
+  final int? id;
   @override
   final String jenisProfil;
   @override
@@ -262,11 +276,13 @@ class _$_LokasiTugas implements _LokasiTugas {
   @override
   final DateTime? updatedAt;
   @override
+  final DateTime? deletedAt;
+  @override
   final DesaKelurahan? desaKelurahan;
 
   @override
   String toString() {
-    return 'LokasiTugas(id: $id, jenisProfil: $jenisProfil, profilId: $profilId, desaKelurahanId: $desaKelurahanId, kecamatanId: $kecamatanId, kabupatenKotaId: $kabupatenKotaId, provinsiId: $provinsiId, createdAt: $createdAt, updatedAt: $updatedAt, desaKelurahan: $desaKelurahan)';
+    return 'LokasiTugas(id: $id, jenisProfil: $jenisProfil, profilId: $profilId, desaKelurahanId: $desaKelurahanId, kecamatanId: $kecamatanId, kabupatenKotaId: $kabupatenKotaId, provinsiId: $provinsiId, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, desaKelurahan: $desaKelurahan)';
   }
 
   @override
@@ -288,6 +304,7 @@ class _$_LokasiTugas implements _LokasiTugas {
                 .equals(other.provinsiId, provinsiId) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
             const DeepCollectionEquality().equals(other.updatedAt, updatedAt) &&
+            const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
             const DeepCollectionEquality()
                 .equals(other.desaKelurahan, desaKelurahan));
   }
@@ -305,6 +322,7 @@ class _$_LokasiTugas implements _LokasiTugas {
       const DeepCollectionEquality().hash(provinsiId),
       const DeepCollectionEquality().hash(createdAt),
       const DeepCollectionEquality().hash(updatedAt),
+      const DeepCollectionEquality().hash(deletedAt),
       const DeepCollectionEquality().hash(desaKelurahan));
 
   @JsonKey(ignore: true)
@@ -322,7 +340,7 @@ class _$_LokasiTugas implements _LokasiTugas {
 
 abstract class _LokasiTugas implements LokasiTugas {
   const factory _LokasiTugas(
-      {required final int id,
+      {final int? id,
       required final String jenisProfil,
       required final String profilId,
       required final String desaKelurahanId,
@@ -331,13 +349,14 @@ abstract class _LokasiTugas implements LokasiTugas {
       required final String provinsiId,
       final DateTime? createdAt,
       final DateTime? updatedAt,
+      final DateTime? deletedAt,
       final DesaKelurahan? desaKelurahan}) = _$_LokasiTugas;
 
   factory _LokasiTugas.fromJson(Map<String, dynamic> json) =
       _$_LokasiTugas.fromJson;
 
   @override
-  int get id;
+  int? get id;
   @override
   String get jenisProfil;
   @override
@@ -354,6 +373,8 @@ abstract class _LokasiTugas implements LokasiTugas {
   DateTime? get createdAt;
   @override
   DateTime? get updatedAt;
+  @override
+  DateTime? get deletedAt;
   @override
   DesaKelurahan? get desaKelurahan;
   @override

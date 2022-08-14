@@ -8,7 +8,7 @@ part of 'lokasi_tugas.dart';
 
 _$_LokasiTugas _$$_LokasiTugasFromJson(Map<String, dynamic> json) =>
     _$_LokasiTugas(
-      id: json['id'] as int,
+      id: json['id'] as int?,
       jenisProfil: json['jenisProfil'] as String,
       profilId: json['profilId'] as String,
       desaKelurahanId: json['desaKelurahanId'] as String,
@@ -21,6 +21,9 @@ _$_LokasiTugas _$$_LokasiTugasFromJson(Map<String, dynamic> json) =>
       updatedAt: json['updatedAt'] == null
           ? null
           : DateTime.parse(json['updatedAt'] as String),
+      deletedAt: json['deletedAt'] == null
+          ? null
+          : DateTime.parse(json['deletedAt'] as String),
       desaKelurahan: json['desaKelurahan'] == null
           ? null
           : DesaKelurahan.fromJson(
@@ -38,5 +41,6 @@ Map<String, dynamic> _$$_LokasiTugasToJson(_$_LokasiTugas instance) =>
       'provinsiId': instance.provinsiId,
       'createdAt': instance.createdAt?.toIso8601String(),
       'updatedAt': instance.updatedAt?.toIso8601String(),
+      'deletedAt': instance.deletedAt?.toIso8601String(),
       'desaKelurahan': instance.desaKelurahan,
     };

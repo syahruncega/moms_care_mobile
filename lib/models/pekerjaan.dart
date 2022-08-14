@@ -15,6 +15,8 @@ class Pekerjaan with _$Pekerjaan {
   const factory Pekerjaan({
     required int id,
     required String pekerjaan,
+    DateTime? createdAt,
+    DateTime? updatedAt,
     DateTime? deletedAt,
   }) = _Pekerjaan;
 

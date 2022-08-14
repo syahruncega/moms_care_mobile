@@ -22,6 +22,8 @@ GolonganDarah _$GolonganDarahFromJson(Map<String, dynamic> json) {
 mixin _$GolonganDarah {
   int get id => throw _privateConstructorUsedError;
   String get golonganDarah => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
   DateTime? get deletedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +37,12 @@ abstract class $GolonganDarahCopyWith<$Res> {
   factory $GolonganDarahCopyWith(
           GolonganDarah value, $Res Function(GolonganDarah) then) =
       _$GolonganDarahCopyWithImpl<$Res>;
-  $Res call({int id, String golonganDarah, DateTime? deletedAt});
+  $Res call(
+      {int id,
+      String golonganDarah,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      DateTime? deletedAt});
 }
 
 /// @nodoc
@@ -51,6 +58,8 @@ class _$GolonganDarahCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? golonganDarah = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
     Object? deletedAt = freezed,
   }) {
     return _then(_value.copyWith(
@@ -62,6 +71,14 @@ class _$GolonganDarahCopyWithImpl<$Res>
           ? _value.golonganDarah
           : golonganDarah // ignore: cast_nullable_to_non_nullable
               as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
@@ -77,7 +94,12 @@ abstract class _$$_GolonganDarahCopyWith<$Res>
           _$_GolonganDarah value, $Res Function(_$_GolonganDarah) then) =
       __$$_GolonganDarahCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String golonganDarah, DateTime? deletedAt});
+  $Res call(
+      {int id,
+      String golonganDarah,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      DateTime? deletedAt});
 }
 
 /// @nodoc
@@ -95,6 +117,8 @@ class __$$_GolonganDarahCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? golonganDarah = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
     Object? deletedAt = freezed,
   }) {
     return _then(_$_GolonganDarah(
@@ -106,6 +130,14 @@ class __$$_GolonganDarahCopyWithImpl<$Res>
           ? _value.golonganDarah
           : golonganDarah // ignore: cast_nullable_to_non_nullable
               as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
@@ -118,7 +150,11 @@ class __$$_GolonganDarahCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_GolonganDarah implements _GolonganDarah {
   const _$_GolonganDarah(
-      {required this.id, required this.golonganDarah, this.deletedAt});
+      {required this.id,
+      required this.golonganDarah,
+      this.createdAt,
+      this.updatedAt,
+      this.deletedAt});
 
   factory _$_GolonganDarah.fromJson(Map<String, dynamic> json) =>
       _$$_GolonganDarahFromJson(json);
@@ -128,11 +164,15 @@ class _$_GolonganDarah implements _GolonganDarah {
   @override
   final String golonganDarah;
   @override
+  final DateTime? createdAt;
+  @override
+  final DateTime? updatedAt;
+  @override
   final DateTime? deletedAt;
 
   @override
   String toString() {
-    return 'GolonganDarah(id: $id, golonganDarah: $golonganDarah, deletedAt: $deletedAt)';
+    return 'GolonganDarah(id: $id, golonganDarah: $golonganDarah, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt)';
   }
 
   @override
@@ -143,6 +183,8 @@ class _$_GolonganDarah implements _GolonganDarah {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.golonganDarah, golonganDarah) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            const DeepCollectionEquality().equals(other.updatedAt, updatedAt) &&
             const DeepCollectionEquality().equals(other.deletedAt, deletedAt));
   }
 
@@ -152,6 +194,8 @@ class _$_GolonganDarah implements _GolonganDarah {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(golonganDarah),
+      const DeepCollectionEquality().hash(createdAt),
+      const DeepCollectionEquality().hash(updatedAt),
       const DeepCollectionEquality().hash(deletedAt));
 
   @JsonKey(ignore: true)
@@ -171,6 +215,8 @@ abstract class _GolonganDarah implements GolonganDarah {
   const factory _GolonganDarah(
       {required final int id,
       required final String golonganDarah,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
       final DateTime? deletedAt}) = _$_GolonganDarah;
 
   factory _GolonganDarah.fromJson(Map<String, dynamic> json) =
@@ -180,6 +226,10 @@ abstract class _GolonganDarah implements GolonganDarah {
   int get id;
   @override
   String get golonganDarah;
+  @override
+  DateTime? get createdAt;
+  @override
+  DateTime? get updatedAt;
   @override
   DateTime? get deletedAt;
   @override

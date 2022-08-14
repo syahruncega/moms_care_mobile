@@ -16,6 +16,8 @@ class StatusPerkawinan with _$StatusPerkawinan {
   const factory StatusPerkawinan({
     required int id,
     required String statusPerkawinan,
+    DateTime? createdAt,
+    DateTime? updatedAt,
     DateTime? deletedAt,
   }) = _StatusPerkawinan;
 

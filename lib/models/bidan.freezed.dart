@@ -20,7 +20,7 @@ Bidan _$BidanFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Bidan {
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   String get userId => throw _privateConstructorUsedError;
   String get nik => throw _privateConstructorUsedError;
   String get namaLengkap => throw _privateConstructorUsedError;
@@ -58,7 +58,7 @@ abstract class $BidanCopyWith<$Res> {
   factory $BidanCopyWith(Bidan value, $Res Function(Bidan) then) =
       _$BidanCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {String? id,
       String userId,
       String nik,
       String namaLengkap,
@@ -136,7 +136,7 @@ class _$BidanCopyWithImpl<$Res> implements $BidanCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       userId: userId == freezed
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -317,7 +317,7 @@ abstract class _$$_BidanCopyWith<$Res> implements $BidanCopyWith<$Res> {
       __$$_BidanCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {String? id,
       String userId,
       String nik,
       String namaLengkap,
@@ -402,7 +402,7 @@ class __$$_BidanCopyWithImpl<$Res> extends _$BidanCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       userId: userId == freezed
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -515,7 +515,7 @@ class __$$_BidanCopyWithImpl<$Res> extends _$BidanCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Bidan implements _Bidan {
   const _$_Bidan(
-      {required this.id,
+      {this.id,
       required this.userId,
       required this.nik,
       required this.namaLengkap,
@@ -548,7 +548,7 @@ class _$_Bidan implements _Bidan {
       _$$_BidanFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   final String userId;
   @override
@@ -709,7 +709,7 @@ class _$_Bidan implements _Bidan {
 
 abstract class _Bidan implements Bidan {
   const factory _Bidan(
-      {required final String id,
+      {final String? id,
       required final String userId,
       required final String nik,
       required final String namaLengkap,
@@ -740,7 +740,7 @@ abstract class _Bidan implements Bidan {
   factory _Bidan.fromJson(Map<String, dynamic> json) = _$_Bidan.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   String get userId;
   @override

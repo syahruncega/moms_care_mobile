@@ -18,7 +18,7 @@ String listWilayahDomisiliToJson(List<WilayahDomisili> data) =>
 @freezed
 class WilayahDomisili with _$WilayahDomisili {
   const factory WilayahDomisili({
-    required int id,
+    int? id,
     required String anggotaKeluargaId,
     required String alamat,
     required String desaKelurahanId,

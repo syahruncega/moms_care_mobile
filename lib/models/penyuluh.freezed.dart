@@ -20,7 +20,7 @@ Penyuluh _$PenyuluhFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Penyuluh {
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   String get userId => throw _privateConstructorUsedError;
   String get nik => throw _privateConstructorUsedError;
   String get namaLengkap => throw _privateConstructorUsedError;
@@ -59,7 +59,7 @@ abstract class $PenyuluhCopyWith<$Res> {
   factory $PenyuluhCopyWith(Penyuluh value, $Res Function(Penyuluh) then) =
       _$PenyuluhCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {String? id,
       String userId,
       String nik,
       String namaLengkap,
@@ -137,7 +137,7 @@ class _$PenyuluhCopyWithImpl<$Res> implements $PenyuluhCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       userId: userId == freezed
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -319,7 +319,7 @@ abstract class _$$_PenyuluhCopyWith<$Res> implements $PenyuluhCopyWith<$Res> {
       __$$_PenyuluhCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {String? id,
       String userId,
       String nik,
       String namaLengkap,
@@ -405,7 +405,7 @@ class __$$_PenyuluhCopyWithImpl<$Res> extends _$PenyuluhCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       userId: userId == freezed
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -518,7 +518,7 @@ class __$$_PenyuluhCopyWithImpl<$Res> extends _$PenyuluhCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Penyuluh implements _Penyuluh {
   const _$_Penyuluh(
-      {required this.id,
+      {this.id,
       required this.userId,
       required this.nik,
       required this.namaLengkap,
@@ -551,7 +551,7 @@ class _$_Penyuluh implements _Penyuluh {
       _$$_PenyuluhFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   final String userId;
   @override
@@ -712,7 +712,7 @@ class _$_Penyuluh implements _Penyuluh {
 
 abstract class _Penyuluh implements Penyuluh {
   const factory _Penyuluh(
-      {required final String id,
+      {final String? id,
       required final String userId,
       required final String nik,
       required final String namaLengkap,
@@ -743,7 +743,7 @@ abstract class _Penyuluh implements Penyuluh {
   factory _Penyuluh.fromJson(Map<String, dynamic> json) = _$_Penyuluh.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   String get userId;
   @override

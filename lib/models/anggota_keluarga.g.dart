@@ -8,7 +8,7 @@ part of 'anggota_keluarga.dart';
 
 _$_AnggotaKeluarga _$$_AnggotaKeluargaFromJson(Map<String, dynamic> json) =>
     _$_AnggotaKeluarga(
-      id: json['id'] as String,
+      id: json['id'] as String?,
       bidanId: json['bidanId'] as String,
       kartuKeluargaId: json['kartuKeluargaId'] as String,
       userId: json['userId'] as String?,

@@ -22,6 +22,8 @@ Agama _$AgamaFromJson(Map<String, dynamic> json) {
 mixin _$Agama {
   int get id => throw _privateConstructorUsedError;
   String get agama => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
   DateTime? get deletedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -33,7 +35,12 @@ mixin _$Agama {
 abstract class $AgamaCopyWith<$Res> {
   factory $AgamaCopyWith(Agama value, $Res Function(Agama) then) =
       _$AgamaCopyWithImpl<$Res>;
-  $Res call({int id, String agama, DateTime? deletedAt});
+  $Res call(
+      {int id,
+      String agama,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      DateTime? deletedAt});
 }
 
 /// @nodoc
@@ -48,6 +55,8 @@ class _$AgamaCopyWithImpl<$Res> implements $AgamaCopyWith<$Res> {
   $Res call({
     Object? id = freezed,
     Object? agama = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
     Object? deletedAt = freezed,
   }) {
     return _then(_value.copyWith(
@@ -59,6 +68,14 @@ class _$AgamaCopyWithImpl<$Res> implements $AgamaCopyWith<$Res> {
           ? _value.agama
           : agama // ignore: cast_nullable_to_non_nullable
               as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
@@ -72,7 +89,12 @@ abstract class _$$_AgamaCopyWith<$Res> implements $AgamaCopyWith<$Res> {
   factory _$$_AgamaCopyWith(_$_Agama value, $Res Function(_$_Agama) then) =
       __$$_AgamaCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String agama, DateTime? deletedAt});
+  $Res call(
+      {int id,
+      String agama,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      DateTime? deletedAt});
 }
 
 /// @nodoc
@@ -88,6 +110,8 @@ class __$$_AgamaCopyWithImpl<$Res> extends _$AgamaCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? agama = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
     Object? deletedAt = freezed,
   }) {
     return _then(_$_Agama(
@@ -99,6 +123,14 @@ class __$$_AgamaCopyWithImpl<$Res> extends _$AgamaCopyWithImpl<$Res>
           ? _value.agama
           : agama // ignore: cast_nullable_to_non_nullable
               as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
@@ -110,7 +142,12 @@ class __$$_AgamaCopyWithImpl<$Res> extends _$AgamaCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Agama implements _Agama {
-  const _$_Agama({required this.id, required this.agama, this.deletedAt});
+  const _$_Agama(
+      {required this.id,
+      required this.agama,
+      this.createdAt,
+      this.updatedAt,
+      this.deletedAt});
 
   factory _$_Agama.fromJson(Map<String, dynamic> json) =>
       _$$_AgamaFromJson(json);
@@ -120,11 +157,15 @@ class _$_Agama implements _Agama {
   @override
   final String agama;
   @override
+  final DateTime? createdAt;
+  @override
+  final DateTime? updatedAt;
+  @override
   final DateTime? deletedAt;
 
   @override
   String toString() {
-    return 'Agama(id: $id, agama: $agama, deletedAt: $deletedAt)';
+    return 'Agama(id: $id, agama: $agama, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt)';
   }
 
   @override
@@ -134,6 +175,8 @@ class _$_Agama implements _Agama {
             other is _$_Agama &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.agama, agama) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            const DeepCollectionEquality().equals(other.updatedAt, updatedAt) &&
             const DeepCollectionEquality().equals(other.deletedAt, deletedAt));
   }
 
@@ -143,6 +186,8 @@ class _$_Agama implements _Agama {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(agama),
+      const DeepCollectionEquality().hash(createdAt),
+      const DeepCollectionEquality().hash(updatedAt),
       const DeepCollectionEquality().hash(deletedAt));
 
   @JsonKey(ignore: true)
@@ -162,6 +207,8 @@ abstract class _Agama implements Agama {
   const factory _Agama(
       {required final int id,
       required final String agama,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
       final DateTime? deletedAt}) = _$_Agama;
 
   factory _Agama.fromJson(Map<String, dynamic> json) = _$_Agama.fromJson;
@@ -170,6 +217,10 @@ abstract class _Agama implements Agama {
   int get id;
   @override
   String get agama;
+  @override
+  DateTime? get createdAt;
+  @override
+  DateTime? get updatedAt;
   @override
   DateTime? get deletedAt;
   @override

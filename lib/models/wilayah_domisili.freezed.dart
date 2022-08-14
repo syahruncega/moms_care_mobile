@@ -20,7 +20,7 @@ WilayahDomisili _$WilayahDomisiliFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$WilayahDomisili {
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
   String get anggotaKeluargaId => throw _privateConstructorUsedError;
   String get alamat => throw _privateConstructorUsedError;
   String get desaKelurahanId => throw _privateConstructorUsedError;
@@ -44,7 +44,7 @@ abstract class $WilayahDomisiliCopyWith<$Res> {
           WilayahDomisili value, $Res Function(WilayahDomisili) then) =
       _$WilayahDomisiliCopyWithImpl<$Res>;
   $Res call(
-      {int id,
+      {int? id,
       String anggotaKeluargaId,
       String alamat,
       String desaKelurahanId,
@@ -84,7 +84,7 @@ class _$WilayahDomisiliCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       anggotaKeluargaId: anggotaKeluargaId == freezed
           ? _value.anggotaKeluargaId
           : anggotaKeluargaId // ignore: cast_nullable_to_non_nullable
@@ -137,7 +137,7 @@ abstract class _$$_WilayahDomisiliCopyWith<$Res>
       __$$_WilayahDomisiliCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int id,
+      {int? id,
       String anggotaKeluargaId,
       String alamat,
       String desaKelurahanId,
@@ -179,7 +179,7 @@ class __$$_WilayahDomisiliCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       anggotaKeluargaId: anggotaKeluargaId == freezed
           ? _value.anggotaKeluargaId
           : anggotaKeluargaId // ignore: cast_nullable_to_non_nullable
@@ -228,7 +228,7 @@ class __$$_WilayahDomisiliCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_WilayahDomisili implements _WilayahDomisili {
   const _$_WilayahDomisili(
-      {required this.id,
+      {this.id,
       required this.anggotaKeluargaId,
       required this.alamat,
       required this.desaKelurahanId,
@@ -244,7 +244,7 @@ class _$_WilayahDomisili implements _WilayahDomisili {
       _$$_WilayahDomisiliFromJson(json);
 
   @override
-  final int id;
+  final int? id;
   @override
   final String anggotaKeluargaId;
   @override
@@ -326,7 +326,7 @@ class _$_WilayahDomisili implements _WilayahDomisili {
 
 abstract class _WilayahDomisili implements WilayahDomisili {
   const factory _WilayahDomisili(
-      {required final int id,
+      {final int? id,
       required final String anggotaKeluargaId,
       required final String alamat,
       required final String desaKelurahanId,
@@ -342,7 +342,7 @@ abstract class _WilayahDomisili implements WilayahDomisili {
       _$_WilayahDomisili.fromJson;
 
   @override
-  int get id;
+  int? get id;
   @override
   String get anggotaKeluargaId;
   @override

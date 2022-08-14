@@ -7,7 +7,7 @@ part of 'bidan.dart';
 // **************************************************************************
 
 _$_Bidan _$$_BidanFromJson(Map<String, dynamic> json) => _$_Bidan(
-      id: json['id'] as String,
+      id: json['id'] as String?,
       userId: json['userId'] as String,
       nik: json['nik'] as String,
       namaLengkap: json['namaLengkap'] as String,

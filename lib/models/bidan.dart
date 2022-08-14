@@ -25,7 +25,7 @@ String listBidanToJson(List<Bidan> data) =>
 @freezed
 class Bidan with _$Bidan {
   const factory Bidan({
-    required String id,
+    String? id,
     required String userId,
     required String nik,
     required String namaLengkap,

@@ -16,6 +16,8 @@ class StatusHubungan with _$StatusHubungan {
   const factory StatusHubungan({
     required int id,
     required String statusHubungan,
+    DateTime? createdAt,
+    DateTime? updatedAt,
     DateTime? deletedAt,
   }) = _StatusHubungan;
 

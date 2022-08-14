@@ -27,8 +27,8 @@ mixin _$User {
   String get isRemaja => throw _privateConstructorUsedError;
   String get status => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
-  dynamic get updatedAt => throw _privateConstructorUsedError;
-  dynamic get deletedAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
+  DateTime? get deletedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -47,8 +47,8 @@ abstract class $UserCopyWith<$Res> {
       String isRemaja,
       String status,
       DateTime? createdAt,
-      dynamic updatedAt,
-      dynamic deletedAt});
+      DateTime? updatedAt,
+      DateTime? deletedAt});
 }
 
 /// @nodoc
@@ -103,11 +103,11 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       updatedAt: updatedAt == freezed
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as DateTime?,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as DateTime?,
     ));
   }
 }
@@ -125,8 +125,8 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       String isRemaja,
       String status,
       DateTime? createdAt,
-      dynamic updatedAt,
-      dynamic deletedAt});
+      DateTime? updatedAt,
+      DateTime? deletedAt});
 }
 
 /// @nodoc
@@ -182,11 +182,11 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
       updatedAt: updatedAt == freezed
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as DateTime?,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as DateTime?,
     ));
   }
 }
@@ -222,9 +222,9 @@ class _$_User implements _User {
   @override
   final DateTime? createdAt;
   @override
-  final dynamic updatedAt;
+  final DateTime? updatedAt;
   @override
-  final dynamic deletedAt;
+  final DateTime? deletedAt;
 
   @override
   String toString() {
@@ -283,8 +283,8 @@ abstract class _User implements User {
       required final String isRemaja,
       required final String status,
       final DateTime? createdAt,
-      final dynamic updatedAt,
-      final dynamic deletedAt}) = _$_User;
+      final DateTime? updatedAt,
+      final DateTime? deletedAt}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
@@ -303,9 +303,9 @@ abstract class _User implements User {
   @override
   DateTime? get createdAt;
   @override
-  dynamic get updatedAt;
+  DateTime? get updatedAt;
   @override
-  dynamic get deletedAt;
+  DateTime? get deletedAt;
   @override
   @JsonKey(ignore: true)
   _$$_UserCopyWith<_$_User> get copyWith => throw _privateConstructorUsedError;

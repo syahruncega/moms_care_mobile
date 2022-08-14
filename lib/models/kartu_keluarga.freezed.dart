@@ -20,7 +20,7 @@ KartuKeluarga _$KartuKeluargaFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$KartuKeluarga {
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   String get bidanId => throw _privateConstructorUsedError;
   String get nomorKk => throw _privateConstructorUsedError;
   String get namaKepalaKeluarga => throw _privateConstructorUsedError;
@@ -57,7 +57,7 @@ abstract class $KartuKeluargaCopyWith<$Res> {
           KartuKeluarga value, $Res Function(KartuKeluarga) then) =
       _$KartuKeluargaCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {String? id,
       String bidanId,
       String nomorKk,
       String namaKepalaKeluarga,
@@ -129,7 +129,7 @@ class _$KartuKeluargaCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       bidanId: bidanId == freezed
           ? _value.bidanId
           : bidanId // ignore: cast_nullable_to_non_nullable
@@ -289,7 +289,7 @@ abstract class _$$_KartuKeluargaCopyWith<$Res>
       __$$_KartuKeluargaCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {String? id,
       String bidanId,
       String nomorKk,
       String namaKepalaKeluarga,
@@ -368,7 +368,7 @@ class __$$_KartuKeluargaCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       bidanId: bidanId == freezed
           ? _value.bidanId
           : bidanId // ignore: cast_nullable_to_non_nullable
@@ -469,7 +469,7 @@ class __$$_KartuKeluargaCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_KartuKeluarga implements _KartuKeluarga {
   const _$_KartuKeluarga(
-      {required this.id,
+      {this.id,
       required this.bidanId,
       required this.nomorKk,
       required this.namaKepalaKeluarga,
@@ -498,7 +498,7 @@ class _$_KartuKeluarga implements _KartuKeluarga {
       _$$_KartuKeluargaFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   final String bidanId;
   @override
@@ -636,7 +636,7 @@ class _$_KartuKeluarga implements _KartuKeluarga {
 
 abstract class _KartuKeluarga implements KartuKeluarga {
   const factory _KartuKeluarga(
-      {required final String id,
+      {final String? id,
       required final String bidanId,
       required final String nomorKk,
       required final String namaKepalaKeluarga,
@@ -665,7 +665,7 @@ abstract class _KartuKeluarga implements KartuKeluarga {
       _$_KartuKeluarga.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   String get bidanId;
   @override

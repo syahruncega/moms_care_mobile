@@ -15,6 +15,8 @@ class Pendidikan with _$Pendidikan {
   const factory Pendidikan({
     required int id,
     required String pendidikan,
+    DateTime? createdAt,
+    DateTime? updatedAt,
     DateTime? deletedAt,
   }) = _Pendidikan;
 

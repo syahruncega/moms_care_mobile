@@ -16,6 +16,8 @@ class GolonganDarah with _$GolonganDarah {
   const factory GolonganDarah({
     required int id,
     required String golonganDarah,
+    DateTime? createdAt,
+    DateTime? updatedAt,
     DateTime? deletedAt,
   }) = _GolonganDarah;
 

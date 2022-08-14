@@ -7,7 +7,7 @@ part of 'penyuluh.dart';
 // **************************************************************************
 
 _$_Penyuluh _$$_PenyuluhFromJson(Map<String, dynamic> json) => _$_Penyuluh(
-      id: json['id'] as String,
+      id: json['id'] as String?,
       userId: json['userId'] as String,
       nik: json['nik'] as String,
       namaLengkap: json['namaLengkap'] as String,

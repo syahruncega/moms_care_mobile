@@ -22,6 +22,8 @@ StatusPerkawinan _$StatusPerkawinanFromJson(Map<String, dynamic> json) {
 mixin _$StatusPerkawinan {
   int get id => throw _privateConstructorUsedError;
   String get statusPerkawinan => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
   DateTime? get deletedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +37,12 @@ abstract class $StatusPerkawinanCopyWith<$Res> {
   factory $StatusPerkawinanCopyWith(
           StatusPerkawinan value, $Res Function(StatusPerkawinan) then) =
       _$StatusPerkawinanCopyWithImpl<$Res>;
-  $Res call({int id, String statusPerkawinan, DateTime? deletedAt});
+  $Res call(
+      {int id,
+      String statusPerkawinan,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      DateTime? deletedAt});
 }
 
 /// @nodoc
@@ -51,6 +58,8 @@ class _$StatusPerkawinanCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? statusPerkawinan = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
     Object? deletedAt = freezed,
   }) {
     return _then(_value.copyWith(
@@ -62,6 +71,14 @@ class _$StatusPerkawinanCopyWithImpl<$Res>
           ? _value.statusPerkawinan
           : statusPerkawinan // ignore: cast_nullable_to_non_nullable
               as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
@@ -77,7 +94,12 @@ abstract class _$$_StatusPerkawinanCopyWith<$Res>
           _$_StatusPerkawinan value, $Res Function(_$_StatusPerkawinan) then) =
       __$$_StatusPerkawinanCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String statusPerkawinan, DateTime? deletedAt});
+  $Res call(
+      {int id,
+      String statusPerkawinan,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      DateTime? deletedAt});
 }
 
 /// @nodoc
@@ -95,6 +117,8 @@ class __$$_StatusPerkawinanCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? statusPerkawinan = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
     Object? deletedAt = freezed,
   }) {
     return _then(_$_StatusPerkawinan(
@@ -106,6 +130,14 @@ class __$$_StatusPerkawinanCopyWithImpl<$Res>
           ? _value.statusPerkawinan
           : statusPerkawinan // ignore: cast_nullable_to_non_nullable
               as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
@@ -118,7 +150,11 @@ class __$$_StatusPerkawinanCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_StatusPerkawinan implements _StatusPerkawinan {
   const _$_StatusPerkawinan(
-      {required this.id, required this.statusPerkawinan, this.deletedAt});
+      {required this.id,
+      required this.statusPerkawinan,
+      this.createdAt,
+      this.updatedAt,
+      this.deletedAt});
 
   factory _$_StatusPerkawinan.fromJson(Map<String, dynamic> json) =>
       _$$_StatusPerkawinanFromJson(json);
@@ -128,11 +164,15 @@ class _$_StatusPerkawinan implements _StatusPerkawinan {
   @override
   final String statusPerkawinan;
   @override
+  final DateTime? createdAt;
+  @override
+  final DateTime? updatedAt;
+  @override
   final DateTime? deletedAt;
 
   @override
   String toString() {
-    return 'StatusPerkawinan(id: $id, statusPerkawinan: $statusPerkawinan, deletedAt: $deletedAt)';
+    return 'StatusPerkawinan(id: $id, statusPerkawinan: $statusPerkawinan, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt)';
   }
 
   @override
@@ -143,6 +183,8 @@ class _$_StatusPerkawinan implements _StatusPerkawinan {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.statusPerkawinan, statusPerkawinan) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            const DeepCollectionEquality().equals(other.updatedAt, updatedAt) &&
             const DeepCollectionEquality().equals(other.deletedAt, deletedAt));
   }
 
@@ -152,6 +194,8 @@ class _$_StatusPerkawinan implements _StatusPerkawinan {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(statusPerkawinan),
+      const DeepCollectionEquality().hash(createdAt),
+      const DeepCollectionEquality().hash(updatedAt),
       const DeepCollectionEquality().hash(deletedAt));
 
   @JsonKey(ignore: true)
@@ -171,6 +215,8 @@ abstract class _StatusPerkawinan implements StatusPerkawinan {
   const factory _StatusPerkawinan(
       {required final int id,
       required final String statusPerkawinan,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
       final DateTime? deletedAt}) = _$_StatusPerkawinan;
 
   factory _StatusPerkawinan.fromJson(Map<String, dynamic> json) =
@@ -180,6 +226,10 @@ abstract class _StatusPerkawinan implements StatusPerkawinan {
   int get id;
   @override
   String get statusPerkawinan;
+  @override
+  DateTime? get createdAt;
+  @override
+  DateTime? get updatedAt;
   @override
   DateTime? get deletedAt;
   @override

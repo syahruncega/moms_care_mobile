@@ -8,7 +8,7 @@ part of 'wilayah_domisili.dart';
 
 _$_WilayahDomisili _$$_WilayahDomisiliFromJson(Map<String, dynamic> json) =>
     _$_WilayahDomisili(
-      id: json['id'] as int,
+      id: json['id'] as int?,
       anggotaKeluargaId: json['anggotaKeluargaId'] as String,
       alamat: json['alamat'] as String,
       desaKelurahanId: json['desaKelurahanId'] as String,

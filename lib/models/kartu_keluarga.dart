@@ -20,7 +20,7 @@ String listKartuKeluargaToJson(List<KartuKeluarga> data) =>
 @freezed
 class KartuKeluarga with _$KartuKeluarga {
   const factory KartuKeluarga({
-    required String id,
+    String? id,
     required String bidanId,
     required String nomorKk,
     required String namaKepalaKeluarga,
